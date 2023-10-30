@@ -1,0 +1,523 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 16px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: hsl(0, 0%, 95%);
+    scroll-behavior: smooth;
+    background-color: #0362AB;
+}
+/*----------------------------------------------------------------*/
+
+/* Header Styles */
+
+/*----------------------------------------------------------------*/
+header {
+    color: #fff;
+    text-align: center;
+    background-image: linear-gradient( rgba(0,0,0,0.3), rgba(0, 0, 0, 0.3) ),url(/resources/slider.jpg);
+    background-size: cover;
+    height: 25rem;
+}
+
+.header-container {
+    width: 80%;
+    margin: auto;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: right;
+    background-color: #0362AB;
+    color: hsl(0, 0%, 100%);
+    padding: 0.5rem;
+}
+
+.contact-info p {
+    margin: 0;
+    padding-right: 8rem;
+}
+.contact-info p i {
+    padding: 0rem 0.7rem;
+    color: #ffe600;
+}
+.contact-info a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem;
+}
+
+.logo img {
+    width: 13rem;
+    height: auto;
+}
+.logo a {
+    border-bottom: 3px solid #FFF;
+    border-left: 3px solid #fff;
+    border-right:  3px solid #fff;
+    border-radius: 50%;
+    transition: all 0.7s;
+}
+.logo a:hover {
+    border-bottom: 3px solid hsla(197, 100%, 42%, 0.616);
+    border-left: 3px solid hsla(197, 100%, 42%, 0.616);
+    border-right: 3px solid hsla(197, 100%, 42%, 0.616);
+
+}
+
+.mobile-menu {
+    display: none;
+}
+/*----------------------------------------------------------------*/
+
+/* Navigation */
+
+/*----------------------------------------------------------------*/
+nav .nav-links {
+    display: flex;
+    list-style: none;
+    padding: 0.8rem 0;
+}
+
+nav li {
+    display: inline;
+    margin-right: 1.5rem;
+}
+nav a {
+    font-weight: 600;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: hsl(0, 0%, 90%);
+    font-size: 1.1rem;
+    transition: all 0.6s;
+    letter-spacing: 2px;
+
+}
+nav a::after {
+    content: "";
+    display: block;
+    width: 90%;
+    height: 3px;
+    margin-top: 0.5rem;
+    background-color: hsl(0, 0%, 90%);
+    border-radius: 3px;
+    position: relative;
+    z-index: 1;
+    transition: all 0.6s;
+}
+.nav-active::after {
+    background-color: #ffe600;
+
+}
+
+nav a:hover::after {
+    background-color: #ffe600;
+}   
+
+/*----------------------------------------------------------------*/
+
+/* Company Description */
+
+/*----------------------------------------------------------------*/
+#company-description {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: end;
+    padding: 0.5rem;
+    line-height: 3rem;
+    border-radius: 0.5rem;
+    margin: 2rem;   
+    margin-top: 4rem;
+    font-family: 'Roboto Condensed';
+}
+
+.company-description-container h1 {
+    font-size: 2.3rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.company-description-container p {
+    font-size: 1.2rem;
+    font-weight: 400;
+    letter-spacing: 2px;
+    line-height: 2rem;
+    margin-top: 1rem;
+}
+
+
+
+/*----------------------------------------------------------------*/
+
+/* Offer */
+
+/*----------------------------------------------------------------*/
+#offer {
+    width: 80%;
+    margin: auto;
+}
+.offer-container{
+    margin: auto;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-image:linear-gradient( rgba(0,0,0,0.2), rgba(0, 0, 0, 0.2) ), url(/resources/szkolne.jpg);
+    background-size: cover;
+    border-radius: 15px;
+
+
+}
+.offer-container ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 0%;
+    margin: 0;
+    height: 100%;
+    border-radius: 20px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+
+}
+
+.offer-container ul li {
+    text-transform: uppercase;
+    font-weight: 600;
+    text-align:end;
+    justify-content: center;
+    flex-direction: column;
+    padding: 1rem;
+    margin: 1rem;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.6s;
+    cursor: pointer;
+
+
+}
+.offer-container ul li i {
+    font-size: 1.5rem;
+    margin-right:1rem ;
+
+}
+.offer-container ul li:hover {
+    color: #ffb703;
+}
+.offer-active {
+    color: #ffb703;
+}
+
+.offer-description{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5rem;
+    color: hsl(0, 0%, 0%);
+    max-width: 75%;
+    height: 100%;
+    border-radius: 20px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+.offer-description h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+    text-align: center;
+    color: hsl(0, 0%, 100%);
+
+}
+
+.offer-description p {
+    font-size: 1.2rem;
+    text-align:left;
+    color: hsl(0, 0%, 0%);
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    letter-spacing: 2px;
+    line-height: 1.5;
+    font-weight: 400;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.32);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+/*----------------------------------------------------------------*/
+
+/* Partners */
+
+/*----------------------------------------------------------------*/
+
+#partners {
+    margin-top: 2rem;
+    background-image: linear-gradient( rgba(0,0,0,0.3), rgba(0, 0, 0, 0.3) ),url(/resources/partners-background.png);
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center;
+    padding: 2rem;
+}
+
+.partners-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    max-width: 60%;
+    border-radius: 20px;
+    margin: auto;
+    background: rgba(255, 255, 255, 0.32);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8.5px);
+    -webkit-backdrop-filter: blur(8.5px);
+    border: 1px solid rgba(255, 255, 255, 0.68);
+
+}
+
+.partners-container h2 {
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 1rem;
+    text-align: center;
+    color: hsl(0, 0%, 100%);
+    font-size: 2rem;
+    font-weight: 600;
+}
+.partners-container a img {
+   margin: 2rem;
+   width: 150px;
+}
+.partners-list {
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+}
+
+/*----------------------------------------------------------------*/
+
+/* Footer */
+
+/*----------------------------------------------------------------*/
+
+.footer {
+    padding: 2rem;
+    background: #0362AB;
+    color: white;
+    font-weight: 500;
+    text-align: end;
+    gap: 0.2rem;
+  }
+  .footer p {
+    margin-top: 1rem;
+    font-size: 0.8rem;
+  }
+  .footer img {
+    width: 30px;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
+/*----------------------------------------------------------------*/
+
+/* Media */
+
+/*----------------------------------------------------------------*/
+
+/*LAPTOP*/
+
+@media (max-width: 1200px) {
+
+    * {
+        font-size: 14px;
+    }
+}
+
+
+/* TABLET */
+@media (max-width: 992px) {
+* {
+    font-size: 12px;
+}
+
+header {
+    height: 20rem;
+}
+nav {
+    display: none;
+}
+.mobile-menu {
+    display: flex;
+}
+.mobile-menu i {
+    font-size: 2.5rem;
+    margin: 1rem;
+}
+.logo img {
+    width: 100px;
+}
+#company-description{
+    margin-top: 3rem;
+}
+.company-description-container h1 {
+    font-size: 2rem;
+}
+
+.company-description-container p {
+    font-size: 1rem;
+}
+.offer-container {
+    max-width: 100%;
+}
+.offer-description {
+    max-width: 90%;
+    padding: 0;
+}
+.offer-description p {
+    padding: 1rem;
+}
+
+.partners-container {
+    max-width: 80%;
+}
+
+.partners-container a img {
+    margin: 1rem;
+    width: 100px;
+}
+.offer-container ul li  {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+}
+
+/* PHONE */
+
+@media (max-width: 768px) {
+* {
+    font-size: 12px;
+}
+header{
+    height: 12rem;
+}
+.header-container {
+    width: 100%;
+}
+.contact-info p {
+    font-size: 0.8rem;
+    padding-right: 3rem;
+}
+.contact-info p:last-child{
+    display: none;
+}
+.mobile-menu {
+    display: flex;
+}
+.mobile-menu i {
+    font-size: 2.5rem;
+    margin: 1rem;
+}
+.logo-container {
+    margin: auto;
+}
+.logo img {
+    width: 90px;
+    margin: 0.6rem;
+}
+.logo a {
+    border: none;
+}
+.logo a:hover {
+    border: none;
+}
+nav {
+    display: none;
+}
+
+#company-description  {
+    display: none;
+}
+#offer {
+    width: 98%;
+}
+.offer-container {
+    display: block;
+    height: auto;
+    margin: auto;
+    margin-top: 2rem;
+    max-width: 100%;
+}
+.offer-container ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 0;
+
+}
+.offer-container ul li {
+    font-size: 0.7rem;
+    flex-direction: row;
+}
+.offer-description {
+    max-width: fit-content;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 20px;
+}
+
+.offer-description h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.offer-description p {
+    width: 95%;
+    font-size: 1.2rem;
+    line-height: 1.2;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    letter-spacing: 1px;
+
+}
+
+.partners-container {
+    max-width: 90%;
+}
+.partners-container h2 {
+    font-size: 1.3rem;
+}
+.partners-container a img {
+    margin: 1rem;
+    width: 75px;
+}
+
+}
+
