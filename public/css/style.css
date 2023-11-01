@@ -38,7 +38,7 @@ header {
 .contact-info {
     display: flex;
     justify-content: right;
-    background-image: linear-gradient(180deg,#005896 0,rgba(18, 47, 68, 0.4) 3rem,rgba(255, 255, 255, 0.034) 4rem);
+    background-image: linear-gradient(180deg,#005896 0,rgba(18, 47, 68, 0.4) 6rem,rgba(255, 255, 255, 0.034) 5rem);
     color: hsl(0, 0%, 100%);
     padding: 0.5rem;
 }
@@ -66,19 +66,6 @@ header {
     width: 10rem;
     height: auto;
 }
-.logo a {
-    border-bottom: 3px solid #FFF;
-    border-left: 3px solid #fff;
-    border-right:  3px solid #fff;
-    border-radius: 50%;
-    transition: all 0.7s;
-}
-.logo a:hover {
-    border-bottom: 3px solid hsla(197, 100%, 42%, 0.616);
-    border-left: 3px solid hsla(197, 100%, 42%, 0.616);
-    border-right: 3px solid hsla(197, 100%, 42%, 0.616);
-
-}
 
 .mobile-menu {
     display: none;
@@ -104,18 +91,18 @@ nav .nav-links {
 
 nav li {
     display: inline;
-    padding: 0.8rem 1.1rem;
+    margin: 0.8rem 1.1rem;
     cursor: pointer;
 }
 nav a {
+    padding: 0.8rem 1.1rem;
     text-decoration: none;
     text-transform: uppercase;
     color: #333;
     font-size: 0.9rem;
-    transition: all 0.6s;
     letter-spacing: 1px;
 }  
-nav li:hover {
+nav a:hover {
     background-color: #dddddd;
     border-bottom: 3px solid #005896;
 }
@@ -132,21 +119,22 @@ nav li:hover {
 #company-description {
     display: flex;
     flex-direction: column;
-    align-items: start;
+    align-items: center;
     justify-content: end;
     padding: 0.5rem;
     line-height: 3rem;
     border-radius: 0.5rem;
     margin: 2rem;   
     margin-top: 4rem;
-    font-family: 'Roboto Condensed';
 }
 
 .company-description-container h1 {
-    font-size: 1.7rem;
-    font-weight: 600;
+    color: #005896;
+    font-size: 2rem;
+    font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
 }
 
 .company-description-container p {
@@ -165,20 +153,18 @@ nav li:hover {
 
 /*----------------------------------------------------------------*/
 #offer {
-    display: flex;
+    display: block;
     width: 100%;
+    animation: fade-left 1s ease-in;
 }
 .offer-right{
     margin: auto;
     margin-top: 2rem;
     display: flex;
     justify-content: space-around;
-    align-items: center;
     background-image:linear-gradient( rgba(0,0,0,0.2), rgba(0, 0, 0, 0.2) ), url(/resources/szkolne.jpg);
     background-size: cover;
-    border-radius: 15px;
-
-
+    background-repeat: no-repeat;
 }
 .offer-right ul {
     display: flex;
@@ -239,13 +225,14 @@ nav li:hover {
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 2px;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     text-align: center;
     color: hsl(0, 0%, 100%);
 
 }
 
 .offer-description p {
+    height: 25rem;
     font-size: 1.2rem;
     text-align:left;
     color: hsl(0, 0%, 0%);
@@ -282,7 +269,6 @@ nav li:hover {
     display: flex;
     align-items: center;
     flex-direction: column;
-    max-width: 60%;
     border-radius: 20px;
     margin: auto;
     background: rgba(255, 255, 255, 0.32);
@@ -333,7 +319,7 @@ nav li:hover {
     padding: 2rem;
     padding-top: 0;
     padding-bottom: 0;
-    background-image: linear-gradient(180deg,#005896 0,rgba(18, 47, 68, 0.4) 3rem,rgba(255, 255, 255, 0.034) 4rem);
+    background-image: linear-gradient(180deg,#005896 0,rgba(18, 47, 68, 0.4) 4rem,rgba(255, 255, 255, 0.034) 8rem);
   }
   .footer-left a {
     text-decoration: none;
@@ -358,6 +344,27 @@ nav li:hover {
     margin-left: 5px;
     margin-right: 5px;
   }
+
+/*----------------------------------------------------------------*/
+
+/* Contant page */
+
+/*----------------------------------------------------------------*/
+
+#contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    margin: 2rem;
+    border-radius: 0.5rem;
+    margin-top: 4rem;
+    font-family: 'Roboto Condensed';
+    height: 100vh;
+
+}
+
 
 /*----------------------------------------------------------------*/
 
@@ -489,25 +496,19 @@ nav {
     display: none;
 }
 
-#company-description  {
-    display: none;
+.company-description-container h1 {
+    font-size: 1.5rem;
+
 }
 #offer {
     width: 98%;
     display: block;
 }
-.offer-left{
-    width: 100%;
-}
-.offer-right {
-    width: 100%;
-}
 .offer-right {
     display: block;
-    height: auto;
     margin: auto;
     margin-top: 2rem;
-    max-width: 100%;
+    width: 100%;
 }
 .offer-right ul {
     display: flex;
@@ -565,3 +566,36 @@ nav {
 }
 
 }
+
+
+
+.reveal {
+    position: relative;
+    opacity: 0;
+  }
+  .reveal.active {
+    opacity: 1;
+  }
+  .active.fade-bottom {
+    animation: fade-bottom 1s ease-in;
+  }
+  @keyframes fade-bottom {
+    0% {
+      transform: translateY(50px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  @keyframes fade-left {
+    0% {
+      transform: translateX(-100px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
