@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="pl-PL">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -45,8 +45,8 @@
         <nav>
             <ul class="nav-links container">
                 <li ><a href="/" class="nav-active">Strona Główna</a></li>
-                <li><a href="#">O Nas</a></li>
-                <li><a href="#">Druki</a></li>
+                <li><a href="/about">O Nas</a></li>
+                <li><a href="/docs">Druki</a></li>
                 <li><a href="#">Narzędzia</a></li>
                 <li><a href="/contact">Kontakt</a></li>
             </ul>
@@ -56,19 +56,67 @@
             <p>Wszystkie ubezpieczenia w jednym miejscu</p>
         </div>
     <section id="offer">
-        <div class="offer-right container fade-bottom">
-            <ul>
-                <li id="oc" class="panel"><i class="fa-solid fa-car-burst"></i>Oc/Ac</li>
-                <li id="home" class="panel"><i class="fa-solid fa-house-crack"></i>Mieszkanie</li>
-                <li id="life" class="panel"><i class="fa-solid fa-heart-pulse"></i>Na życie</li>
-                <li id="school" class="panel offer-active"><i class="fa-solid fa-user-graduate"></i>Szkolne</li>
-                <li id="travel" class="panel"><i class="fa-solid fa-plane-departure"></i>Podróże</li>
-            </ul>
-            <div class="offer-description">
-                <h2 class="offer-description-header">Ubezpieczenie Szkolne</h1>
-                <p class="offer-description-p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt, vitae repudiandae velit autem deserunt eligendi! </p>
+        <h3 class="offer-header">Oferta</h3>
+        <div class="offer-container">
 
+            <div class="offer-box">
+                <div class="row">
+                    <div class="left-row">
+                        <div><i class="fa-solid fa-car-burst fa-2xl"></i></div>
+                        <div><h4>Ubezpieczenie OC/AC</h4></div>
+                        <div><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem, iusto quod est repellat recusandae magni debitis. Consectetur pariatur quam iusto!</p></div>
+                        <div><a href="#"><button class="button">Sprawdź więcej</button></a></div>
+                    </div>
+                    <div class="right-row">
+                        <div>
+                            <img src="/resources/car-umbrella.gif" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>            <div class="offer-box">
+                <div class="row">
+                    <div class="left-row">
+                        <div><i class="fa-solid fa-heart fa-2xl"></i></div>
+                        <div><h4>Ubezpieczenie na życie</h4></div>
+                        <div><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem, iusto quod est repellat recusandae magni debitis. Consectetur pariatur quam iusto!</p></div>
+                        <div><button class="button">Sprawdź więcej</button></div>
+                    </div>
+                    <div class="right-row">
+                        <div>
+                            <img src="/resources/life-insurance.gif" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>            <div class="offer-box">
+                <div class="row">
+                    <div class="left-row">
+                        <div><i class="fa-solid fa-graduation-cap fa-2xl"></i></i></div>
+                        <div><h4>Ubezpieczenie szkolne</h4></div>
+                        <div><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem, iusto quod est repellat recusandae magni debitis. Consectetur pariatur quam iusto!</p></div>
+                        <div><button class="button">Sprawdź więcej</button></div>
+                    </div>
+                    <div class="right-row">
+                        <div>
+                            <img src="/resources/school-insurance.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>            <div class="offer-box">
+                <div class="row">
+                    <div class="left-row">
+                        <div><i class="fa-solid fa-plane fa-2xl"></i></i></div>
+                        <div><h4>Ubezpieczenie podróżne</h4></div>
+                        <div><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem, iusto quod est repellat recusandae magni debitis. Consectetur pariatur quam iusto!</p></div>
+                        <div><button class="button">Sprawdź więcej</button></div>
+                    </div>
+                    <div class="right-row">
+                        <div>
+                            <img src="/resources/travel-insurance.gif" alt="">
+                        </div>
+                    </div>
+                </div>
             </div>
+
         </div>
     </section>
 
@@ -112,7 +160,7 @@
         <div class="footer-left">
             <span>&copy; 2023</span>
             <span> <a href="#">ZZ-Consulting</a>. <br>Wszystkie prawa zastrzeżone.</span>
-            <p>Created by <img src="/resources/AODesign.png" alt="AODesign logotype"></p>
+            <p>Created by <a href="#"><img src="/resources/AODesign.png" alt="AODesign logotype"></a></p>
         </div>
     </footer>
 
