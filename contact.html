@@ -55,9 +55,45 @@
         </nav>
 
     <section id="contact">
-
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3084.9427413266803!2d18.939491376868098!3d50.26750960051867!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4716cd68d069b65b%3A0x421414c0f57c8038!2sUbezpieczenia%20Chorz%C3%B3w%20Podmiejska%2034%2C%20Agencja%20Op%C5%82at!5e1!3m2!1spl!2spl!4v1698676432248!5m2!1spl!2spl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-   
+        <h2>Kontakt</h2>
+        <div class="contact-container container center">
+            <div class="maps-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3084.9427413266803!2d18.939491376868098!3d50.26750960051867!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4716cd68d069b65b%3A0x421414c0f57c8038!2sUbezpieczenia%20Chorz%C3%B3w%20Podmiejska%2034%2C%20Agencja%20Op%C5%82at!5e1!3m2!1spl!2spl!4v1698676432248!5m2!1spl!2spl" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="contact-form">
+      
+                <div class="left-form">
+                    <h2>Formularz Kontaktowy</h2>
+                    <form>      
+                        <input name="name" type="text" class="feedback-input" placeholder="Imię" required />   
+                        <input name="email" type="text" class="feedback-input" placeholder="E-mail" required />
+                        <textarea name="text" class="feedback-input" placeholder="Wiadomość" required></textarea>
+                        <input type="submit" value="WYŚLIJ"/>
+                      </form>
+                </div>
+                <div class="vl"></div>
+                <div class="right-form">
+                        <div class="address">
+                            <div class="address-box">
+                                <i class="fa-solid fa-location-dot"></i>
+                                <p>41-506 Chorzów ul. Podmiejska 34/U1</p>
+                            </div>
+                            <div class="address-box">
+                                <i class="fa-solid fa-phone"></i>
+                                <p>+48 509 039 039</p>
+                            </div>
+                            <div class="address-box">
+                                <i class="fa-solid fa-envelope"></i>
+                                <p>zzubezpieczenia@gmail.com</p>
+                            </div>
+                            <div class="address-box">
+                                <i class="fa-brands fa-facebook"></i>
+                                <p>ubezpieczeniazz</p>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
     </section>
 
 
@@ -83,6 +119,7 @@
             <p>Created by <a href="#"><img src="/resources/AODesign.png" alt="AODesign logotype"></a></p>
         </div>
     </footer>
+    <i onclick="goTop()" id="pageUp" class="fa-solid fa-circle-arrow-up"></i>
 
     <script src="/script.js"></script>
 </body>

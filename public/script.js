@@ -1,4 +1,4 @@
-
+//Reveal animation
 function reveal() {
     var reveals = document.querySelectorAll(".reveal");
     for (var i = 0; i < reveals.length; i++) {
@@ -11,7 +11,7 @@ function reveal() {
     }
   }
   window.addEventListener("scroll", reveal);
-
+//Hamburger Menu 
   const menu = document.querySelector(".menu");
   const menuItems = document.querySelectorAll(".menuItem");
   const hamburger= document.querySelector(".hamburger");
@@ -24,11 +24,13 @@ function reveal() {
       closeIcon.style.display = "none";
       hamburger.style.position = "absolute";
       menuIcon.style.display = "block";
+      hamburger.style.top = "4rem";
     } else {
       menu.classList.add("showMenu");
       closeIcon.style.display = "block";
       hamburger.style.position = "fixed";
       menuIcon.style.display = "none";
+      hamburger.style.top = "1rem";
     }
   }
   
@@ -38,3 +40,18 @@ function reveal() {
       menuItem.addEventListener("click", toggleMenu);
     }
   )
+
+// Page Up Arrow
+let mybutton = document.getElementById("pageUp");
+window.onscroll = function() {scrollFunction()};
+function scrollFunction() {
+  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+function goTop() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
