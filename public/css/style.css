@@ -598,9 +598,9 @@ textarea {
     z-index: 99;
     border: none;
     outline: none;
-    color: #005896;
+    color: #333;
     cursor: pointer;
-    padding: 15px;
+    padding: 10px;
     border-radius: 10px;
     font-size: 3rem;
   }
