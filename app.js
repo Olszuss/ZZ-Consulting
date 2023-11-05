@@ -18,8 +18,11 @@ app.get('/about', function(req, res) {
   res.sendFile(path.join(__dirname, '/about.html'));
 });
 
-app.get('/forms', function(req, res){
-  res.sendFile(path.join(__dirname, '/forms.html'));
+app.get('/robots.txt', function(req, res){
+  res.sendFile(path.join(__dirname, '/robots.txt'));
+});
+app.get('/sitemap.xml', function(req, res){
+  res.sendFile(path.join(__dirname, '/sitemap.xml'));
 });
 
 app.get('*', function(req, res){
