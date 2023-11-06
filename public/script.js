@@ -1,3 +1,6 @@
+
+
+
 //Reveal animation
 function reveal() {
     var reveals = document.querySelectorAll(".reveal");
@@ -41,17 +44,7 @@ function reveal() {
     }
   )
 
-// Page Up Arrow
-// let mybutton = document.getElementById("pageUp");
-// window.onscroll = function() {scrollFunction()};
-// function scrollFunction() {
-//   if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-//     mybutton.style.display = "block";
-//   } else {
-//     mybutton.style.display = "none";
-//   }
-
-//   }
+//Page Up Button
 document.getElementById('pageUp').addEventListener('click', () => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 });
