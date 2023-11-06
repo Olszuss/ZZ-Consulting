@@ -31,10 +31,16 @@ app.get('/sitemap.xml', function(req, res){
   res.sendFile(path.join(__dirname, '/sitemap.xml'));
 });
 
+app.get('/pzu', function(req, res) {
+  res.sendFile(path.join(__dirname, '/partners/pzu.html'));
+});
+
+
+
 app.get('*', function(req, res){
   res.sendFile(path.join(__dirname, '/404.html'));
 });
 
 
 app.listen(port);
-console.log('Server started at http://localhost:' + port);
+console.log('Server started at port: ' + port);

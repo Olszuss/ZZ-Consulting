@@ -24,7 +24,7 @@ body {
 header {
     color: #fff;
     text-align: center;
-    background-image: linear-gradient( rgba(0,0,0,0.3), rgba(0, 0, 0, 0.3) ),url(/resources/image0.jpeg);
+    background-image: linear-gradient( rgba(0,0,0,0.3), rgba(0, 0, 0, 0.3) ),url(/resources/header.webp);
     background-size: cover;
     background-position: center 25%;
     height: 15rem;
@@ -239,10 +239,12 @@ nav a:hover {
   letter-spacing: 0.05em;
   border-radius: 20em;
   cursor: pointer;
+  transition: 0.4s;
 }
 
 .button:hover {
   box-shadow: 0 0.5em 1.5em -0.5em #000fd498;
+  transform: scale(1.1);
 }
 /*----------------------------------------------------------------*/
 
@@ -252,7 +254,7 @@ nav a:hover {
 
 #partners {
     margin-top: 2rem;
-    background-image: linear-gradient( rgba(0,0,0,0.3), rgba(0, 0, 0, 0.3) ),url(/resources/partners-background.png);
+    background-image: linear-gradient( rgba(0,0,0,0.3), rgba(0, 0, 0, 0.3) ),url(/resources/partners-background.webp);
     background-repeat: no-repeat;
     background-size:cover;
     background-position: center;
@@ -294,6 +296,13 @@ nav a:hover {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+}
+.partners-list> a > img{
+    transition: 0.15s;
+    cursor: pointer;
+}
+.partners-list > a > img:hover {
+    transform: scale(1.1);
 
 }
 
@@ -598,7 +607,7 @@ textarea {
     z-index: 99;
     border: none;
     outline: none;
-    color: #333;
+    color: #2e82c2;
     cursor: pointer;
     padding: 10px;
     border-radius: 10px;
