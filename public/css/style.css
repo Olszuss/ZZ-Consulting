@@ -33,6 +33,10 @@ header {
 .header-container {
     width: 80%;
     margin: auto;
+    display: flex;
+    align-items: center;
+    height: 80%;
+
 }
 
 .contact-info {
@@ -301,6 +305,7 @@ nav a:hover {
 .partners-list img {
    margin: 2rem;
    width: 140px;
+   height: auto;
 }
 .partners-list {
     display: flex;
@@ -371,8 +376,6 @@ nav a:hover {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-}
-#contact h2 {
     margin-top: 2rem;
 }
 
@@ -577,7 +580,7 @@ textarea {
 /* FORMS */
 
 /*----------------------------------------------------------------*/
-#forms h2 {
+#forms {
     margin-top: 2rem;
 }
 .form-links-list {
@@ -604,6 +607,99 @@ textarea {
 
 }
 
+
+
+/*----------------------------------------------------------------*/
+
+/*Partner */
+
+/*----------------------------------------------------------------*/
+
+#partner {
+    margin-top: 2rem;
+}
+.partner-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+.partner-box {
+    display: flex;
+    flex-direction: row;
+    padding: 2rem;
+    width: 100%;
+}
+.partner-left {
+    width: 70%;
+    background-color: #41495723;
+}
+.partner-header {
+    text-align: end;
+    height: 6rem;
+}
+.partner-header > img {
+    width: 120px;
+    margin: 0.5rem;
+}
+
+.partner-description {
+    padding: 2rem;
+    text-align: justify;
+    line-height: 1.5rem;
+    width: 100%;
+    color: #5c606aea;
+    letter-spacing: 1px;
+}
+.partner-description p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+.partner-description p:first-child {
+    margin-top: 5rem;
+}
+.partner-description p:last-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+    font-size: 1.5rem;
+    line-height: 3rem;
+}
+
+
+
+
+
+
+
+
+.partner-right {
+    width: 30%;
+    text-align: right;
+}
+.partner-nav > ul {
+    list-style-type: none;
+}
+
+.partner-nav > ul > li {
+    padding: 1.3rem;
+    padding-right: 0.5rem;
+}
+
+.partner-nav > ul > li > a {
+    text-decoration: none;
+    color: #414957;
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 1.3rem;
+    padding-left: 5rem;
+    padding-right: 0rem;
+}
+.partner-active {
+    background-color: #41495723;
+}
 
 /*----------------------------------------------------------------*/
 
@@ -864,9 +960,6 @@ textarea {
     .mobile-menu i {
         font-size: 2.5rem;
         margin: 1rem;
-    }
-    .logo-container {
-        margin: auto;
     }
     .logo img {
         width: 90px;

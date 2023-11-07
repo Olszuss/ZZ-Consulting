@@ -31,8 +31,14 @@ app.get('/sitemap.xml', function(req, res){
   res.sendFile(path.join(__dirname, '/sitemap.xml'));
 });
 
-app.get('/pzu', function(req, res) {
+app.get('/partnerzy/pzu', function(req, res) {
   res.sendFile(path.join(__dirname, '/partners/pzu.html'));
+});
+app.get('/partnerzy/allianz', function(req, res) {
+  res.sendFile(path.join(__dirname, '/partners/allianz.html'));
+});
+app.get('/partnerzy/generali', function(req, res) {
+  res.sendFile(path.join(__dirname, '/partners/generali.html'));
 });
 
 
