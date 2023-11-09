@@ -192,7 +192,6 @@ nav a:hover {
 }
 .offer-box {
     margin: 3rem;
-    min-height: 22rem;
     margin-left: auto;
     box-shadow: 0px 12px 30px #0000001a;
     border-radius: 36px;
@@ -212,18 +211,25 @@ nav a:hover {
 
 .row{
     display: flex;
+
 }
 .left-row {
     width: 48%;
+}
+.left-row h4 {
+    font-size: 1.2rem;
 }
 .left-row h4, .left-row i {
     color: #005896;
 }
 .left-row >div >a {
     text-decoration: none;
-
+}
+.left-row >div >a >button {
+    margin-top: 2rem;
 }
 .left-row > div > p{
+    margin-top: 4rem;
     font-size: 1rem;
     font-weight: 400;
     letter-spacing: 1px;
@@ -267,7 +273,45 @@ nav a:hover {
 /* Partners */
 
 /*----------------------------------------------------------------*/
+#partners-home {
+    margin-top: 2rem;
+}
+.home-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.home-box {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.partners-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2rem;
+    transition: all 0.5s;
+    border: 4px outset rgba(245,245,245,0.23);
 
+}
+.partners-box:hover {
+    transform: scale(1.1);
+}
+.home-logo img {
+    padding: 1rem;
+    width: 180px;
+}
+.home-button {
+    margin: 2rem;
+}
+.home-button a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.4rem;
+}
 #partners {
     margin-top: 2rem;
     background-image: linear-gradient( rgba(0,0,0,0.3), rgba(0, 0, 0, 0.3) ),url(/resources/partners-background.webp);
@@ -515,7 +559,7 @@ textarea {
 .about-us .right-img img {
     width: 300px;
     height: 300px;
-    clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);
+    clip-path: polygon(40% 0%, 40% 20%, 100% 20%, 100% 80%, 40% 80%, 40% 100%, 0% 50%);
 }
 .about-us p {
     text-align: left;
@@ -570,7 +614,7 @@ textarea {
 .left-img img {
     width: 300px;
     height: 300px;
-    clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
+    clip-path: polygon(0% 20%, 60% 20%, 60% 0%, 100% 50%, 60% 100%, 60% 80%, 0% 80%);
 }
 .what-we-do {
     animation: fade-up 1s ease-in;
@@ -667,13 +711,6 @@ textarea {
     font-size: 1.5rem;
     line-height: 3rem;
 }
-
-
-
-
-
-
-
 
 .partner-right {
     width: 30%;
