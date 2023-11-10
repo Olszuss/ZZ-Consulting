@@ -916,17 +916,20 @@ textarea {
     
     .menu {
         position: fixed;
-        transform: translateX(100%);
+        transform: translateX(-100%);
         transition: transform 0.4s;
         top: 0;
         left: 0;
         right: 0;
         bottom: 20;
         z-index: 99;
+        text-align: left;
         background: #005896;
         color: white;
         list-style: none;
-        padding-top: 3rem;
+        padding-top: 0rem;
+        width: 55%;
+        border-bottom-right-radius: 25%;
     }
     
     .showMenu {
@@ -979,6 +982,19 @@ textarea {
     }
     #pageUp {
         right: 15px;
+    }
+    .about-container {
+        display: block;
+    }
+    .left-site {
+        margin-right: 0;
+    }
+    .right-site {
+        margin-right: 0;
+    }
+    .offer-box {
+        margin-right: auto;
+        margin-left: auto;
     }
 }
 
@@ -1126,6 +1142,12 @@ textarea {
         display: block;
         margin-bottom: 1rem;
     }
+    .left-site {
+        margin-right: 0;
+    }
+    .right-site {
+        margin-right: 0;
+    }
     .what-we-do img, .left-img img {
         clip-path: ellipse(45% 45% at 50% 50%) !important;
     }
@@ -1155,6 +1177,7 @@ textarea {
     .partner-box {
         display:flex;
         flex-direction: column-reverse; 
+        padding: 0;
     }
     .partner-right {
         display: none;
@@ -1195,6 +1218,9 @@ textarea {
     .partner-header img {
         width: 100px;
     }
+    .partner-header {
+        margin-bottom: 2rem;
+    }
     .partner-right-mobile {
         display: flex;
         justify-content: center;
@@ -1216,12 +1242,21 @@ textarea {
         background-color: #dddddd;
         border-radius: 1rem;
     }
+    .partner-container {
+        padding: 0.5rem;
+        margin-bottom: 2rem;
+    }
     .partner-back a i {
         font-size: 1.5rem;
         margin: 1rem;
     }
     .partners-box {
         margin: 0.5rem;
+        height: 180px;
+        width: 180px;
+    }
+    .partners-box:hover {
+        transform: none;
     }
     .home-logo img {
         width: 100px;
