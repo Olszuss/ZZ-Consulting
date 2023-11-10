@@ -27,13 +27,11 @@ function reveal() {
       closeIcon.style.display = "none";
       hamburger.style.position = "fixed";
       menuIcon.style.display = "block";
-      hamburger.style.top = "4rem";
     } else {
       menu.classList.add("showMenu");
       closeIcon.style.display = "block";
       hamburger.style.position = "fixed";
       menuIcon.style.display = "none";
-      hamburger.style.top = "1rem";
     }
   }
   

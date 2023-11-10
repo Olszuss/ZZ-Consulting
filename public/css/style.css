@@ -526,6 +526,12 @@ textarea {
     font-size: 2rem;
     color: #005896;
 }
+.address-box p {
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: #333;
+}
 
 /*----------------------------------------------------------------*/
 
@@ -704,7 +710,7 @@ textarea {
 .partner-description p:first-child {
     margin-top: 5rem;
 }
-.partner-description p:last-child {
+.partner-description p:last-child, .contact-description {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -876,9 +882,6 @@ textarea {
     nav {
         display: none;
     }
-    .mobile-menu {
-        display: block;
-    }
     .menuItem {
         display: block;
         margin: 2rem 4rem;
@@ -913,7 +916,7 @@ textarea {
     
     .menu {
         position: fixed;
-        transform: translateY(-100%);
+        transform: translateX(100%);
         transition: transform 0.4s;
         top: 0;
         left: 0;
@@ -927,7 +930,7 @@ textarea {
     }
     
     .showMenu {
-        transform: translateY(0);
+        transform: translateX(0);
     }
     .mobile-menu {
         display: flex;
@@ -1001,9 +1004,6 @@ textarea {
     .contact-info p:last-child{
         display: none;
     }
-    .mobile-menu {
-        display: flex;
-    }
     .mobile-menu i {
         font-size: 2.5rem;
         margin: 1rem;
@@ -1023,11 +1023,12 @@ textarea {
     }
     .mobile-menu {
         display: block;
+        width: 80%;
     }
     .menuItem {
         display: block;
         margin: 2rem 4rem;
-        font-size: 1.8rem;
+        font-size: 1.3rem;
         color: white;
         text-decoration: none;
     }
@@ -1054,21 +1055,24 @@ textarea {
     
     .menu {
         position: fixed;
-        transform: translateY(-100%);
+        transform: translateX(-100%);
         transition: transform 0.4s;
         top: 0;
         left: 0;
         right: 0;
         bottom: 20;
         z-index: 99;
+        text-align: left;
         background: #005896;
         color: white;
         list-style: none;
         padding-top: 0rem;
+        width: 75%;
+        border-bottom-right-radius: 25%;
     }
     
     .showMenu {
-        transform: translateY(0);
+        transform: translateX(0);
     }
 
     .company-description-container h1 {
@@ -1215,5 +1219,11 @@ textarea {
     .partner-back a i {
         font-size: 1.5rem;
         margin: 1rem;
+    }
+    .partners-box {
+        margin: 0.5rem;
+    }
+    .home-logo img {
+        width: 100px;
     }
 }
