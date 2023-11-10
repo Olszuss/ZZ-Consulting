@@ -410,10 +410,12 @@ nav a:hover {
     margin-left: 5px;
     margin-right: 5px;
   }
-
+  .partner-back {
+    display: none;
+}
 /*----------------------------------------------------------------*/
 
-/* Content page */
+/* Contact page */
 
 /*----------------------------------------------------------------*/
 
@@ -496,15 +498,14 @@ textarea {
     border-radius: 30rem;
 }
 .left-form {
-    width: 48%;
+    width: 55%;
 }
 .right-form {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
-    width: 40%;
+    width: 35%;
 }
 .address {
     display: flex;
@@ -1128,12 +1129,83 @@ textarea {
 
     .contact-form {
         display: block;
-
+    }
+    .maps-container {
+        padding-bottom: 60%;
     }
     .left-form, .right-form {
         width: 100%;
     }
     .vl {
         display: none;
+    }
+
+    .partner-box {
+        display:flex;
+        flex-direction: column-reverse; 
+    }
+    .partner-right {
+        display: none;
+        width: 100%;
+        text-align: start;
+    }
+    .partner-nav >ul {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        text-align: start;
+        justify-content: space-between;
+    }
+    .partner-left {
+        width: 100%;
+    }
+    .partner-nav > ul > li > a {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    }
+    .partner-description {
+        text-align:left;
+        padding: 0.2rem;
+    }
+    .partner-description p:first-child {
+        margin-top: 2rem;
+    }
+    .partner-description p:last-child {
+        margin-top: 1rem;
+        font-size: 1.1rem;
+        line-height: 2rem;
+    }
+    .contact-description {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .partner-header img {
+        width: 100px;
+    }
+    .partner-right-mobile {
+        display: flex;
+        justify-content: center;
+        margin: 1rem;
+    }
+    .partner-back {
+        display: flex;
+        justify-content: start;
+    }
+    .partner-back a {
+        margin-bottom: 1rem;
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #414957;
+        font-size: 1.5rem;
+        text-decoration: none;
+        background-color: #dddddd;
+        border-radius: 1rem;
+    }
+    .partner-back a i {
+        font-size: 1.5rem;
+        margin: 1rem;
     }
 }

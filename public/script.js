@@ -80,3 +80,8 @@ function scrollToTop() {
 window.onscroll = function() {
   checkScroll();
 };
+
+//Back button (partners site)
+let backButton = document.querySelector('.js-back');
+
+backButton.addEventListener("click", () => { history.back()});
