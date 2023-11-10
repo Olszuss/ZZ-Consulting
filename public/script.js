@@ -25,7 +25,7 @@ function reveal() {
     if (menu.classList.contains("showMenu")) {
       menu.classList.remove("showMenu");
       closeIcon.style.display = "none";
-      hamburger.style.position = "absolute";
+      hamburger.style.position = "fixed";
       menuIcon.style.display = "block";
       hamburger.style.top = "4rem";
     } else {
@@ -83,5 +83,6 @@ window.onscroll = function() {
 
 //Back button (partners site)
 let backButton = document.querySelector('.js-back');
-
-backButton.addEventListener("click", () => { history.back()});
+if (backButton != null) {
+backButton.addEventListener("click", () => { history.back()})
+}

@@ -854,6 +854,9 @@ textarea {
     #offer {
         max-width: 90vw;
     }
+    .offer-container {
+        max-width: 100%;
+    }
 }
 
 
@@ -889,12 +892,15 @@ textarea {
     }
     
     .hamburger {
-        position: absolute;
+        position: fixed;
         z-index: 100;
-        right: 1rem;
         top: 4rem;
-        padding: 4px;
+        right: 0;
         cursor: pointer;
+        background-color: #005796;
+        padding: 0.3rem;
+        border-top-left-radius: 50%;
+        border-bottom-left-radius: 50%;
     }
 
     .hamburger i {
@@ -968,6 +974,9 @@ textarea {
         justify-content: center;
         align-items: center;
     }
+    #pageUp {
+        right: 15px;
+    }
 }
 
 /* PHONE */
@@ -1028,16 +1037,15 @@ textarea {
     }
     
     .hamburger {
-        position: absolute;
+        position: fixed;
         z-index: 100;
-        right: 1rem;
+        right: 0;
         top: 4rem;
-        padding: 4px;
         cursor: pointer;
 
     }
     .hamburger i {
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
     
     .hamburger .closeIcon {
