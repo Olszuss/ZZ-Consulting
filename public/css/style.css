@@ -295,6 +295,7 @@ nav a:hover {
     margin: 2rem;
     transition: all 0.5s;
     border: 4px outset rgba(245,245,245,0.23);
+    text-decoration: none;
 
 }
 .partners-box:hover {
@@ -307,7 +308,7 @@ nav a:hover {
 .home-button {
     margin: 2rem;
 }
-.home-button a {
+.home-button span {
     text-decoration: none;
     color: #333;
     font-size: 1.4rem;
@@ -394,6 +395,7 @@ nav a:hover {
   }
   .footer-right {
     background-color: #FFF;
+    border-radius: 50%
   }
   .footer-left {
     text-align: end;
@@ -411,7 +413,7 @@ nav a:hover {
 
 /*----------------------------------------------------------------*/
 
-/* Contant page */
+/* Content page */
 
 /*----------------------------------------------------------------*/
 
@@ -425,19 +427,19 @@ nav a:hover {
 
 .maps-container  {
     position: relative;
-    padding-bottom: 56.25%;
+    padding-bottom: 40%;
     height: 0;
     overflow: hidden;
-    }
-    .maps-container iframe {
+}
+.maps-container iframe {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 80%;
-    }
+}
 
-.feedback-input {
+.contact-input {
   color:rgb(0, 0, 0);
   font-weight:500;
   font-size: 18px;
@@ -467,14 +469,12 @@ textarea {
   width: 100%;
   background:#005896;
   border-radius:5px;
-  border:0;
   cursor:pointer;
   color:white;
-  font-size:24px;
+  font-size:1.6rem;
   padding-top:10px;
   padding-bottom:10px;
   transition: all 0.3s;
-  margin-top:-4px;
   font-weight:700;
 }
 
