@@ -455,11 +455,15 @@ nav a:hover {
   width:100%;
   box-sizing: border-box;
   outline:0;
+  transition: all 0.4s;
   &:focus {
     background-color: hsl(0, 0%, 90%); 
+    -webkit-box-shadow: 1px 1px 3px 0px rgba(0, 23, 255, 1);
+    -moz-box-shadow: 1px 1px 3px 0px rgba(0, 23, 255, 1);
+    box-shadow: 1px 1px 3px 0px rgba(0, 23, 255, 1);
   }
-
 }
+
 
 textarea {
   height: 150px;
@@ -807,6 +811,10 @@ textarea {
     border: 2px solid #333;
     padding: 1rem;
     border-radius: 1rem;
+    transition:all .45s;
+}
+#success a:hover {
+    background-color: #0075c9;
 }
 #success div {
     margin-bottom: 25rem;

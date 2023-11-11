@@ -29,7 +29,7 @@ app.get('/contact', function(req, res) {
 app.post('/contact', 
 	[
 		check('name').notEmpty().withMessage('Imię jest wymagane!'),
-    check('email').isEmail().withMessage('Nieprawidłowy adres email!'),
+    	check('email').isEmail().withMessage('Nieprawidłowy adres email!'),
 		check('subject').notEmpty().withMessage('Temat jest wymagany!'),
 		check('message').notEmpty().withMessage('Wiadomość jest wymagana!')
 	], (req, res) => {
@@ -43,7 +43,8 @@ app.post('/contact',
 		else
 		{
 			const transporter = nodemailer.createTransport({
-				service : 'Gmail',
+				host: "mail61.mydevil.net",
+				port: 587,
 				auth : {
 					user : process.env.EMAIL_USERNAME,
 					pass : process.env.EMAIL_PASSWORD
@@ -51,17 +52,19 @@ app.post('/contact',
 			});
 
 			const mail_option = {
-				from : req.body.email,
-				to : process.env.EMAIL_USERNAME,
+				from : process.env.EMAIL_USERNAME,
+				to : process.env.EMAIL_RECEIVES,
 				subject : req.body.subject,
-				html: 
-        `<div style="text-align: center;">
+				html: 		
+        `
+		<img src="http://node.olszus.usermd.net/resources/Icons/android-chrome-192x192.png">
+		<div style="text-align: center;">
         <h1>Otrzymano nową wiadomość z formularza kontaktowego!</h1>
         </div>
         <h2>Wiadomość od ${req.body.name} </h2>
         <h3>Mail: ${req.body.email}</h3>
-        <p>Wiadomość: <br>
-        ${req.body.message}</p>
+        <h3>Wiadomość: </h3>
+        <p>${req.body.message}</p>
         `
 			};
 
