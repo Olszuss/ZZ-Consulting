@@ -68,9 +68,23 @@
                 <div class="left-form">
                     <h2>Formularz Kontaktowy</h2>
                     <form action="#" method="POST">   
-                        <input name="name" id="name" type="text" class="contact-input" placeholder="Imię"  />                           <input name="email" id="email" type="text" class="contact-input" placeholder="E-mail"  />
+                        <input name="name" id="name" type="text" class="contact-input" placeholder="Imię"  />  
+                         <% if(errors && errors.name) { %>
+                            <span class="text-danger"><%= errors.name.msg %></span>
+                            <% } %>
+                        <input name="lastname" id="lastname" type="text" class="contact-input" placeholder="Nazwisko"  />   
+                        <input name="email" id="email" type="text" class="contact-input" placeholder="E-mail"  />
+                            <% if (errors && errors.email) { %>
+                            <span class="text-danger"><%= errors.email.msg %></span>
+                            <% } %>
                         <input name="subject" id="subject" type="text" class="contact-input" placeholder="Temat"  />
+                             <% if (errors && errors.subject) { %>
+                            <span class="text-danger"><%= errors.subject.msg %></span>
+                            <% } %>
                         <textarea name="message" id="message" class="contact-input" placeholder="Wiadomość" ></textarea>
+                            <% if(errors && errors.message) { %>
+                            <span class="text-danger"><%= errors.message.msg %></span>
+                            <% } %>
                         <input type="submit" value="WYŚLIJ"/>
                       </form>
                 </div>

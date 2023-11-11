@@ -1,12 +1,21 @@
 const express = require('express');
 const path = require('path');
 const compression = require('compression');
+const bodyParser = require('body-parser');
+const {check, validationResult} = require('express-validator');
+const nodemailer = require('nodemailer');
+const ejs = require('ejs');
+const dotenv = require('dotenv').config();
 
 const app = express();
 app.use(compression());
 app.disable('x-powered-by');
 const port = process.env.PORT || 8080;
 app.use(express.static("public"));
+app.use(bodyParser.urlencoded({ extended: true }));
+app.set('view engine', 'ejs');
+app.use(express.json());
+
 
 
 app.get('/', function(req, res) {
@@ -15,6 +24,64 @@ app.get('/', function(req, res) {
 
 app.get('/contact', function(req, res) {
   res.sendFile(path.join(__dirname, '/contact.html'));
+});
+
+app.post('/contact', 
+	[
+		check('name').notEmpty().withMessage('Imię jest wymagane!'),
+    check('email').isEmail().withMessage('Nieprawidłowy adres email!'),
+		check('subject').notEmpty().withMessage('Temat jest wymagany!'),
+		check('message').notEmpty().withMessage('Wiadomość jest wymagana!')
+	], (req, res) => {
+
+		const errors = validationResult(req);
+
+		if(!errors.isEmpty())
+		{
+			res.render('contact', { errors : errors.mapped() });
+		}
+		else
+		{
+			const transporter = nodemailer.createTransport({
+				service : 'Gmail',
+				auth : {
+					user : process.env.EMAIL_USERNAME,
+					pass : process.env.EMAIL_PASSWORD
+				}
+			});
+
+			const mail_option = {
+				from : req.body.email,
+				to : process.env.EMAIL_USERNAME,
+				subject : req.body.subject,
+				html: 
+        `<div style="text-align: center;">
+        <h1>Otrzymano nową wiadomość z formularza kontaktowego!</h1>
+        </div>
+        <h2>Wiadomość od ${req.body.name} </h2>
+        <h3>Mail: ${req.body.email}</h3>
+        <p>Wiadomość: <br>
+        ${req.body.message}</p>
+        `
+			};
+
+			transporter.sendMail(mail_option, (error, info) => {
+				if(error)
+				{
+					console.log(error);
+				}
+				else
+				{
+					res.redirect('/success');
+				}
+			});
+		}
+});
+
+app.get('/success', (req, res) => {
+
+  res.sendFile(path.join(__dirname, '/success.html'));
+
 });
 
 app.get('/about/', function(req, res) {

@@ -504,7 +504,6 @@ textarea {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     width: 35%;
 }
 .address {
@@ -788,7 +787,30 @@ textarea {
 .reveal.active {
     opacity: 1;
 }
-
+.text-danger {
+    font-size: 1.3rem;
+    color: red;
+    font-weight: 600;
+}
+#success {
+    margin-top: 2rem;
+}
+#success h1 {
+    margin: 4rem;
+    margin-top: 0;
+}
+#success a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.3rem;
+    font-weight: 600;
+    border: 2px solid #333;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+#success div {
+    margin-bottom: 25rem;
+}
 .active.fade-bottom {
     animation: fade-bottom 1s ease-in;
 }
@@ -1261,4 +1283,5 @@ textarea {
     .home-logo img {
         width: 100px;
     }
+
 }
