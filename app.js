@@ -32,7 +32,8 @@ app.post('/contact',
     	check('email').isEmail().withMessage('Nieprawidłowy adres email!'),
 		check('subject').notEmpty().withMessage('Temat jest wymagany!'),
 		check('message').notEmpty().withMessage('Wiadomość jest wymagana!')
-	], (req, res) => {
+	]
+	, (req, res) => {
 
 		const errors = validationResult(req);
 
