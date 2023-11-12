@@ -3,11 +3,11 @@
 
 //Reveal animation
 function reveal() {
-    var reveals = document.querySelectorAll(".reveal");
-    for (var i = 0; i < reveals.length; i++) {
-      var windowHeight = window.innerHeight;
-      var elementTop = reveals[i].getBoundingClientRect().top;
-      var elementVisible = 150;
+    let reveals = document.querySelectorAll(".reveal");
+    for (let i = 0; i < reveals.length; i++) {
+      let windowHeight = window.innerHeight;
+      let elementTop = reveals[i].getBoundingClientRect().top;
+      let elementVisible = 250;
       if (elementTop < windowHeight - elementVisible) {
         reveals[i].classList.add("active");
       }
@@ -27,13 +27,11 @@ function reveal() {
       closeIcon.style.display = "none";
       hamburger.style.position = "fixed";
       menuIcon.style.display = "block";
-      hamburger.style.top = "4rem";
     } else {
       menu.classList.add("showMenu");
       closeIcon.style.display = "block";
       hamburger.style.position = "fixed";
       menuIcon.style.display = "none";
-      hamburger.style.top = "1rem";
     }
   }
   

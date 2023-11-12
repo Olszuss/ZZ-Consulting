@@ -162,7 +162,7 @@ nav a:hover {
 
 /*----------------------------------------------------------------*/
 #offer {
-    animation: fade-up 1s ease-in;
+    animation: fade-up 0.75s ease-in;
     display: flex;
     margin: auto;
     flex-direction: column;
@@ -382,8 +382,8 @@ nav a:hover {
     font-weight: 500;
     gap: 0.2rem;
     padding: 2rem;
-    padding-top: 0;
-    padding-bottom: 0;
+    padding-top: 0.7rem;
+    padding-bottom: 0.7rem;
     background-image: linear-gradient(180deg,#005896 0,rgba(18, 47, 68, 0.4) 4rem,rgba(255, 255, 255, 0.034) 8rem);
   }
   .footer-left a {
@@ -455,11 +455,15 @@ nav a:hover {
   width:100%;
   box-sizing: border-box;
   outline:0;
+  transition: all 0.4s;
   &:focus {
     background-color: hsl(0, 0%, 90%); 
+    -webkit-box-shadow: 1px 1px 3px 0px rgba(0, 23, 255, 1);
+    -moz-box-shadow: 1px 1px 3px 0px rgba(0, 23, 255, 1);
+    box-shadow: 1px 1px 3px 0px rgba(0, 23, 255, 1);
   }
-
 }
+
 
 textarea {
   height: 150px;
@@ -504,7 +508,6 @@ textarea {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     width: 35%;
 }
 .address {
@@ -526,6 +529,12 @@ textarea {
     font-size: 2rem;
     color: #005896;
 }
+.address-box p {
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: #333;
+}
 
 /*----------------------------------------------------------------*/
 
@@ -545,7 +554,7 @@ textarea {
     color: yellow;
     padding: 1.2rem;
 }
-.about-us {
+.about-us  {
     padding: 2rem;
     text-align: center;
     width: 100%;
@@ -556,18 +565,18 @@ textarea {
     border-radius: 0.5rem;
     margin-top: 1rem;
     margin-bottom: 5rem;
+
 }
 .about-us .right-img img {
     width: 300px;
     height: 300px;
     clip-path: polygon(40% 0%, 40% 20%, 100% 20%, 100% 80%, 40% 80%, 40% 100%, 0% 50%);
+    animation: fade-right 1s;
 }
 .about-us p {
     text-align: left;
     padding: 1rem 5rem 1rem 5rem;
     letter-spacing: 1px;
-    box-shadow: 0px 12px 30px #0000001a;
-    border-radius: 36px;
 }
  h1 {
     color: #414957;
@@ -618,7 +627,14 @@ textarea {
     clip-path: polygon(0% 20%, 60% 20%, 60% 0%, 100% 50%, 60% 100%, 60% 80%, 0% 80%);
 }
 .what-we-do {
-    animation: fade-up 1s ease-in;
+    animation: fade-left 0.75s;
+    box-shadow: 0px 12px 30px #0000001a;
+    border-radius: 36px;
+}
+.right-descr {
+    box-shadow: 0px 12px 30px #0000001a;
+    border-radius: 36px;
+
 }
 /*----------------------------------------------------------------*/
 
@@ -704,7 +720,7 @@ textarea {
 .partner-description p:first-child {
     margin-top: 5rem;
 }
-.partner-description p:last-child {
+.partner-description p:last-child, .contact-description {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -782,9 +798,42 @@ textarea {
 .reveal.active {
     opacity: 1;
 }
-
+.text-danger {
+    font-size: 1.3rem;
+    color: red;
+    font-weight: 600;
+}
+#success {
+    margin-top: 2rem;
+}
+#success h1 {
+    margin: 4rem;
+    margin-top: 0;
+}
+#success a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.3rem;
+    font-weight: 600;
+    border: 2px solid #333;
+    padding: 1rem;
+    border-radius: 1rem;
+    transition:all .45s;
+}
+#success a:hover {
+    background-color: #0075c9;
+}
+#success div {
+    margin-bottom: 25rem;
+}
+.active.fade-left {
+    animation: fade-left 0.75s ease-in;
+}
+.active.fade-right {
+    animation: fade-right 0.75s ease-in;
+}
 .active.fade-bottom {
-    animation: fade-bottom 1s ease-in;
+    animation: fade-bottom 0.75s ease-in;
 }
 
   @keyframes fade-bottom {
@@ -876,9 +925,6 @@ textarea {
     nav {
         display: none;
     }
-    .mobile-menu {
-        display: block;
-    }
     .menuItem {
         display: block;
         margin: 2rem 4rem;
@@ -913,21 +959,24 @@ textarea {
     
     .menu {
         position: fixed;
-        transform: translateY(-100%);
+        transform: translateX(-100%);
         transition: transform 0.4s;
         top: 0;
         left: 0;
         right: 0;
         bottom: 20;
         z-index: 99;
+        text-align: left;
         background: #005896;
         color: white;
         list-style: none;
-        padding-top: 3rem;
+        padding-top: 0rem;
+        width: 55%;
+        border-bottom-right-radius: 25%;
     }
     
     .showMenu {
-        transform: translateY(0);
+        transform: translateX(0);
     }
     .mobile-menu {
         display: flex;
@@ -977,6 +1026,19 @@ textarea {
     #pageUp {
         right: 15px;
     }
+    .about-container {
+        display: block;
+    }
+    .left-site {
+        margin-right: 0;
+    }
+    .right-site {
+        margin-right: 0;
+    }
+    .offer-box {
+        margin-right: auto;
+        margin-left: auto;
+    }
 }
 
 /* PHONE */
@@ -1001,9 +1063,6 @@ textarea {
     .contact-info p:last-child{
         display: none;
     }
-    .mobile-menu {
-        display: flex;
-    }
     .mobile-menu i {
         font-size: 2.5rem;
         margin: 1rem;
@@ -1023,11 +1082,12 @@ textarea {
     }
     .mobile-menu {
         display: block;
+        width: 80%;
     }
     .menuItem {
         display: block;
         margin: 2rem 4rem;
-        font-size: 1.8rem;
+        font-size: 1.3rem;
         color: white;
         text-decoration: none;
     }
@@ -1054,21 +1114,24 @@ textarea {
     
     .menu {
         position: fixed;
-        transform: translateY(-100%);
+        transform: translateX(-100%);
         transition: transform 0.4s;
         top: 0;
         left: 0;
         right: 0;
         bottom: 20;
         z-index: 99;
+        text-align: left;
         background: #005896;
         color: white;
         list-style: none;
         padding-top: 0rem;
+        width: 75%;
+        border-bottom-right-radius: 25%;
     }
     
     .showMenu {
-        transform: translateY(0);
+        transform: translateX(0);
     }
 
     .company-description-container h1 {
@@ -1122,7 +1185,13 @@ textarea {
         display: block;
         margin-bottom: 1rem;
     }
-    .what-we-do img, .left-img img {
+    .left-site {
+        margin-right: 0;
+    }
+    .right-site {
+        margin-right: 0;
+    }
+    .right-img img, .left-img img {
         clip-path: ellipse(45% 45% at 50% 50%) !important;
     }
 
@@ -1151,6 +1220,7 @@ textarea {
     .partner-box {
         display:flex;
         flex-direction: column-reverse; 
+        padding: 0;
     }
     .partner-right {
         display: none;
@@ -1191,6 +1261,9 @@ textarea {
     .partner-header img {
         width: 100px;
     }
+    .partner-header {
+        margin-bottom: 2rem;
+    }
     .partner-right-mobile {
         display: flex;
         justify-content: center;
@@ -1212,8 +1285,24 @@ textarea {
         background-color: #dddddd;
         border-radius: 1rem;
     }
+    .partner-container {
+        padding: 0.5rem;
+        margin-bottom: 2rem;
+    }
     .partner-back a i {
         font-size: 1.5rem;
         margin: 1rem;
     }
+    .partners-box {
+        margin: 0.5rem;
+        height: 180px;
+        width: 180px;
+    }
+    .partners-box:hover {
+        transform: none;
+    }
+    .home-logo img {
+        width: 100px;
+    }
+
 }
