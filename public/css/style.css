@@ -554,7 +554,7 @@ textarea {
     color: yellow;
     padding: 1.2rem;
 }
-.about-us {
+.about-us  {
     padding: 2rem;
     text-align: center;
     width: 100%;
@@ -565,18 +565,18 @@ textarea {
     border-radius: 0.5rem;
     margin-top: 1rem;
     margin-bottom: 5rem;
+
 }
 .about-us .right-img img {
     width: 300px;
     height: 300px;
     clip-path: polygon(40% 0%, 40% 20%, 100% 20%, 100% 80%, 40% 80%, 40% 100%, 0% 50%);
+    animation: fade-right 1s;
 }
 .about-us p {
     text-align: left;
     padding: 1rem 5rem 1rem 5rem;
     letter-spacing: 1px;
-    box-shadow: 0px 12px 30px #0000001a;
-    border-radius: 36px;
 }
  h1 {
     color: #414957;
@@ -627,7 +627,14 @@ textarea {
     clip-path: polygon(0% 20%, 60% 20%, 60% 0%, 100% 50%, 60% 100%, 60% 80%, 0% 80%);
 }
 .what-we-do {
-    animation: fade-up 0.75s ease-in;
+    animation: fade-left 0.75s;
+    box-shadow: 0px 12px 30px #0000001a;
+    border-radius: 36px;
+}
+.right-descr {
+    box-shadow: 0px 12px 30px #0000001a;
+    border-radius: 36px;
+
 }
 /*----------------------------------------------------------------*/
 
@@ -818,6 +825,12 @@ textarea {
 }
 #success div {
     margin-bottom: 25rem;
+}
+.active.fade-left {
+    animation: fade-left 0.75s ease-in;
+}
+.active.fade-right {
+    animation: fade-right 0.75s ease-in;
 }
 .active.fade-bottom {
     animation: fade-bottom 0.75s ease-in;
@@ -1178,7 +1191,7 @@ textarea {
     .right-site {
         margin-right: 0;
     }
-    .what-we-do img, .left-img img {
+    .right-img img, .left-img img {
         clip-path: ellipse(45% 45% at 50% 50%) !important;
     }
 
