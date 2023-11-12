@@ -10,14 +10,24 @@ const dotenv = require("dotenv").config();
 const app = express();
 app.use(compression());
 app.disable("x-powered-by");
+let options = {
+  maxAge: 3600000*2,
+  etag: true,
+  redirect: true,
+  setHeaders: function(res, path, stat) {
+    res.set ({
+      'Cache-Control': (path.includes('index.html')) ? 'no-cache, max-age=3600000*2' : 'public, max-age=3600000*2'
+    })
+  }
+}
 const port = process.env.PORT || 8080;
-app.use(express.static("public"));
+app.use(express.static("public", options));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.set("view engine", "ejs");
 app.use(express.json());
-
 app.get("/", function (req, res) {
   res.sendFile(path.join(__dirname, "/index.html"));
+
 });
 
 app.get("/contact", function (req, res) {
