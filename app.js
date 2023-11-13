@@ -4,6 +4,7 @@ const compression = require("compression");
 const bodyParser = require("body-parser");
 const { check, validationResult } = require("express-validator");
 const nodemailer = require("nodemailer");
+const generatePdf = require("./generatePDF");
 const ejs = require("ejs");
 const dotenv = require("dotenv").config();
 
@@ -86,6 +87,10 @@ app.post(
 
 app.get("/success", (req, res) => {
   res.sendFile(path.join(__dirname, "/success.html"));
+});
+
+app.get("/tools", (req, res) =>{
+  res.sendFile(path.join(__dirname, "/generator.html"));
 });
 
 app.get("/about/", function (req, res) {

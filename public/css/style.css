@@ -8,6 +8,9 @@
   box-sizing: border-box;
 }
 body {
+  background-image: linear-gradient(90deg, rgba(255,255,255,0.65) 1%, rgba(255,255,255,0.65) 100%),url(https://img.freepik.com/premium-vector/abstract-connecting-dots-lines_41981-773.jpg?w=1800);
+  background-repeat: repeat-y;
+  background-size: contain;
   font-family: "Poppins", sans-serif;
   scroll-behavior: smooth;
 }
@@ -190,13 +193,14 @@ nav a:hover {
   text-align: center;
 }
 .offer-box {
+  background-color: #fff;
   margin: 3rem;
   margin-left: auto;
   box-shadow: 0px 12px 30px #0000001a;
   border-radius: 36px;
   margin-right: auto;
   padding: 2rem;
-  width: 70%;
+  width: 75%;
 }
 .splide__pagination__page {
   background: #005896 !important;
@@ -231,8 +235,8 @@ nav a:hover {
   margin-top: 4rem;
   font-size: 1rem;
   font-weight: 400;
-  letter-spacing: 1px;
-  line-height: 2rem;
+  line-height: 1.4rem;
+  width: 80%;
 }
 .right-row {
   width: 48%;
@@ -253,9 +257,8 @@ nav a:hover {
   font-weight: 500;
   padding: 0.7em 1.4em 0.7em 1.1em;
   color: white;
-  background: linear-gradient(0deg, #2e82c2 0%, #0075c9 100%);
+  background: #FF6C22;
   border: none;
-  box-shadow: 0 0.7em 1.5em -0.5em #142fa798;
   letter-spacing: 0.05em;
   border-radius: 20em;
   cursor: pointer;
@@ -263,7 +266,7 @@ nav a:hover {
 }
 
 .button:hover {
-  box-shadow: 0 0.5em 1.5em -0.5em #000fd498;
+  box-shadow: 0 0.5em 1.5em -0.5em #FF6C22;
   transform: scale(1.1);
 }
 /*----------------------------------------------------------------*/
@@ -290,6 +293,7 @@ nav a:hover {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  background-color: #fff;
   margin: 2rem;
   transition: all 0.5s;
   border: 4px outset rgba(245, 245, 245, 0.23);
@@ -364,6 +368,11 @@ nav a:hover {
   transform: scale(1.1);
 }
 
+#calculator-online {
+  margin-top: 3rem;
+
+}
+
 /*----------------------------------------------------------------*/
 
 /* Footer */
@@ -373,12 +382,13 @@ nav a:hover {
 .footer {
   display: flex;
   justify-content: space-between;
+  align-items: end;
   background: #0362ab;
   color: white;
   font-weight: 500;
   gap: 0.2rem;
-  padding: 2rem;
-  padding-top: 0.7rem;
+  padding: 1rem;
+  padding-top: 1.7rem;
   padding-bottom: 0.7rem;
   background-image: linear-gradient(
     180deg,
@@ -491,6 +501,7 @@ textarea {
 .contact-form {
   display: flex;
   justify-content: space-between;
+  background-color: #fff;
   line-height: 3rem;
   box-shadow: 0px 12px 30px #0000001a;
   border-radius: 36px;
@@ -645,10 +656,12 @@ h1 {
 }
 .what-we-do {
   animation: fade-left 0.75s;
+  background-color: #Fff;
   box-shadow: 0px 12px 30px #0000001a;
   border-radius: 36px;
 }
 .right-descr {
+  background-color: #fff;
   box-shadow: 0px 12px 30px #0000001a;
   border-radius: 36px;
 }
@@ -767,6 +780,50 @@ h1 {
 }
 .partner-active {
   background-color: #41495723;
+}
+/*----------------------------------------------------------------*/
+
+/* Generator */
+
+/*----------------------------------------------------------------*/
+
+#tools {
+  margin-top: 2rem;
+}
+.car-insurance {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.car-left-site {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: left;
+  width: 50%;
+}
+.car-left-site p {
+  width: 70%;
+}
+.car-left-site h1 {
+  font-size: 1.5rem;
+  text-align: start;
+}
+.car-left-site a {
+  text-decoration: none;
+  text-align: start;
+}
+.car-left-site button {
+  justify-content: center;
+  width: 70%;
+  margin-left: 0;
+}
+.car-right-site {
+  width: 50%;
+}
+.car-right-site img {
+ width: 100%;
+ border-radius: 25%;
 }
 
 /*----------------------------------------------------------------*/
@@ -1146,14 +1203,14 @@ h1 {
     width: 100%;
   }
   .right-row {
-    width: 20%;
+    width: 25%;
   }
   .left-row {
-    width: 80%;
+    width: 75%;
     padding-left: 2rem;
   }
   .offer-box .right-row img {
-    width: 100px;
+    width: 100%;
   }
 
   .partners-container {
@@ -1306,5 +1363,19 @@ h1 {
   }
   .home-logo img {
     width: 100px;
+  }
+  .car-insurance {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+  .car-left-site p {
+    width: 90%;
+  }
+  .car-left-site {
+    width: 90%;
+  }
+  .car-right-site {
+    margin-bottom: 2rem;
   }
 }

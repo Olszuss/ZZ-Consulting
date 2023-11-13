@@ -738,7 +738,19 @@ textarea {
 .partner-active {
     background-color: #41495723;
 }
+/*----------------------------------------------------------------*/
 
+/* Generator */
+
+/*----------------------------------------------------------------*/
+
+#generator {
+    background-color: #005796;
+    margin-top: 2rem;
+  }
+  .generator {
+    font-size: 5rem;
+  }
 /*----------------------------------------------------------------*/
 
 /* Animation & Keyframes & Others */
