@@ -16,7 +16,7 @@ let options = {
   redirect: true,
   setHeaders: function(res, path, stat) {
     res.set ({
-      'Cache-Control': (path.includes('index.html')) ? 'no-cache, max-age=3600000*2' : 'public, max-age=3600000*2'
+      'Cache-Control': (path.includes('index.html')) ? 'no-cache, max-age=3600000' : 'public, max-age=3600000'
     })
   }
 }
@@ -49,8 +49,8 @@ app.post(
       res.render("contact", { errors: errors.mapped() });
     } else {
       const transporter = nodemailer.createTransport({
-        host: "mail61.mydevil.net",
-        port: 587,
+        host: process.env.EMAIL_HOST,
+        port: process.env.EMAIL_PORT,
         auth: {
           user: process.env.EMAIL_USERNAME,
           pass: process.env.EMAIL_PASSWORD,
