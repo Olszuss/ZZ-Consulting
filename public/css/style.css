@@ -259,7 +259,7 @@ nav a:hover {
   margin-top: 2rem;
 }
 .left-row > div > p {
-  margin-top: 4rem;
+  margin-top: 2rem;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.4rem;
@@ -607,15 +607,7 @@ textarea {
 .about-us .right-img img {
   width: 300px;
   height: 300px;
-  clip-path: polygon(
-    40% 0%,
-    40% 20%,
-    100% 20%,
-    100% 80%,
-    40% 80%,
-    40% 100%,
-    0% 50%
-  );
+  clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);
   animation: fade-right 1s;
 }
 .about-us p {
@@ -671,15 +663,7 @@ h1 {
 .left-img img {
   width: 300px;
   height: 300px;
-  clip-path: polygon(
-    0% 20%,
-    60% 20%,
-    60% 0%,
-    100% 50%,
-    60% 100%,
-    60% 80%,
-    0% 80%
-  );
+  clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
 }
 .what-we-do {
   animation: fade-left 0.75s;
@@ -747,7 +731,7 @@ h1 {
 }
 .partner-left {
   width: 70%;
-  background-color: #41495723;
+  background-color: hsla(217, 100%, 50%, 0.137);
 }
 .partner-header {
   text-align: end;
@@ -806,7 +790,7 @@ h1 {
   padding-right: 0rem;
 }
 .partner-active {
-  background-color: #41495723;
+  background-color: hsla(217, 100%, 50%, 0.137);
 }
 /*----------------------------------------------------------------*/
 
@@ -1103,8 +1087,11 @@ h1 {
     max-width: 100%;
   }
   .offer-description {
-    max-width: 90%;
+    max-width: 100%;
     padding: 0;
+  }
+  #splide01 {
+    max-width: 100% !important;
   }
   .offer-description p {
     padding: 1rem;
@@ -1391,7 +1378,7 @@ h1 {
     color: #414957;
     font-size: 1.5rem;
     text-decoration: none;
-    background-color: #dddddd;
+    background-color: hsla(217, 100%, 50%, 0.137);
     border-radius: 1rem;
   }
   .partner-container {
