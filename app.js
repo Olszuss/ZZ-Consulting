@@ -4,7 +4,7 @@ const compression = require("compression");
 const bodyParser = require("body-parser");
 const { check, validationResult } = require("express-validator");
 const nodemailer = require("nodemailer");
-const generatePdf = require("./generatePDF");
+// const generatePdf = require("./generatePDF");
 const ejs = require("ejs");
 const dotenv = require("dotenv").config();
 

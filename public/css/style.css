@@ -27,8 +27,7 @@ header {
   text-align: center;
   background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
     url(/resources/header.webp);
-  background-size: cover;
-  background-position: center 25%;
+  background-position: center 35%;
   height: 15rem;
 }
 
@@ -158,16 +157,44 @@ nav a:hover {
   line-height: 2rem;
   margin-top: 1rem;
 }
+/*----------------------------------------------------------------*/
 
+/* Choose Us */
+
+/*----------------------------------------------------------------*/
+.choose-description {
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: left;
+}
+.choose-description > div {
+  width: 48%;
+  margin: 0;
+}
+.choose-description > div >img {
+  border-radius: 15px;
+  box-shadow: 0px 12px 30px #0000001a;
+}
+.choose-description > div > h2 {
+  font-size: 1.3rem;
+  padding: 1rem;
+  padding-left: 0;
+  color: #2e82c2;
+}
+.choose-description > div > p {
+  color: #333;
+}
 /*----------------------------------------------------------------*/
 
 /* Offer */
 
 /*----------------------------------------------------------------*/
 #offer {
-  animation: fade-up 0.75s ease-in;
   display: flex;
   margin: auto;
+  margin-top: 2rem;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -1016,6 +1043,20 @@ h1 {
   .hamburger .closeIcon {
     display: none;
   }
+  .choose-description {
+    display: block;
+  }
+  .choose-description > div {
+    width: 95%;
+    padding: 0.5rem;
+  }
+  .choose-description > .left-site {
+    display: flex;
+    justify-content: center;
+  }
+  .choose-description > .left-site > img {
+    width: 300px;
+  }
 
   .menu {
     position: fixed;
@@ -1201,12 +1242,20 @@ h1 {
   }
   .offer-box {
     width: 100%;
+    padding: 0rem;
+    padding-left: 1.5rem;
+  }
+  .row {
+    align-items: center;
+    flex-direction: column-reverse;
+    justify-content: center;
   }
   .right-row {
     width: 25%;
+    align-self: center;
   }
   .left-row {
-    width: 75%;
+    width: 100%;
     padding-left: 2rem;
   }
   .offer-box .right-row img {
@@ -1374,8 +1423,17 @@ h1 {
   }
   .car-left-site {
     width: 90%;
+    padding-left: 0.5rem;
   }
   .car-right-site {
     margin-bottom: 2rem;
+    width: 100%;
+  }
+  .car-left-site a {
+    display: flex;
+    justify-content: center;
+  }
+  .car-right-site > img {
+    width: 250px;
   }
 }
