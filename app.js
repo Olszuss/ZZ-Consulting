@@ -88,10 +88,16 @@ app.post(
 app.get("/success", (req, res) => {
   res.sendFile(path.join(__dirname, "/success.html"));
 });
-
-app.get("/tools", (req, res) =>{
-  res.sendFile(path.join(__dirname, "/generator.html"));
+/******************************************** */
+//Tools
+/******************************************** */
+app.get("/narzedzia", (req, res) =>{
+  res.sendFile(path.join(__dirname, "/tools/tools.html"));
 });
+
+app.get("/narzedzia/wypowiedzenie-oc", (req,res) =>{
+  res.sendFile(path.join(__dirname, "/tools/wypowiedzenie-oc.html"))
+})
 
 app.get("/about/", function (req, res) {
   res.sendFile(path.join(__dirname, "/about.html"));
