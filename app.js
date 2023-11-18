@@ -97,7 +97,20 @@ app.get("/narzedzia", (req, res) =>{
 
 app.get("/narzedzia/wypowiedzenie-oc", (req,res) =>{
   res.sendFile(path.join(__dirname, "/tools/wypowiedzenie-oc.html"))
-})
+});
+app.post("/narzedzia/wypowiedzenie-oc", (req,res) => {
+  console.log(req.body);
+  res.send("Kiedyś zadziała! :)");
+});
+app.get("/narzedzia/kalkulator-kary", (req, res) =>{
+  res.sendFile(path.join(__dirname, "/tools/kalkulator-kary.html"));
+});
+app.get("/narzedzia/powiadomienie-o-zbyciu", (req,res) => {
+  res.sendFile(path.join(__dirname, "/tools/powiadomienie-o-zbyciu.html"));
+});
+app.get("/narzedzia/powiadomienie-o-wyrejestrowaniu", (req,res) => {
+  res.sendFile(path.join(__dirname, "/tools/powiadomienie-o-wyrejestrowaniu.html"));
+});
 
 app.get("/about/", function (req, res) {
   res.sendFile(path.join(__dirname, "/about.html"));

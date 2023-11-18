@@ -13,7 +13,7 @@ body {
       rgba(255, 255, 255, 0.8) 1%,
       rgba(255, 255, 255, 0.8) 100%
     ),
-    url(https://img.freepik.com/premium-vector/abstract-connecting-dots-lines_41981-773.jpg?w=1800);
+    url(/resources/background.avif);
   background-repeat: repeat-y;
   background-size: contain;
   font-family: "Poppins", sans-serif;
@@ -29,7 +29,7 @@ body {
 }
 header {
   background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-    url(/resources/header.webp);
+    url(/resources/header.avif);
   background-size: cover;
   height: 29rem;
 }
@@ -447,9 +447,8 @@ footer {
   margin: auto;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: end;
   color: white;
-  padding: 1rem;
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
@@ -490,6 +489,16 @@ footer {
 }
 .partner-back {
   display: none;
+}
+.footer-nav > ul, .footer-nav > ul > li > a {
+  color: #fff;
+  text-decoration: none;
+}
+.footer-nav > ul > li > a:hover {
+  text-decoration: underline;
+}
+.footer-nav > ul > li {
+  padding: 0.3rem;
 }
 /*----------------------------------------------------------------*/
 
@@ -932,6 +941,28 @@ h1 {
 }
 .wrongVin {
   color: red;
+}
+.form-container > form > button {
+  width: 50%;
+  margin-top: 2rem !important;
+  margin: auto;
+}
+.form-container > form > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.calc {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+.calc > div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
 }
 /*----------------------------------------------------------------*/
 
@@ -1433,6 +1464,19 @@ h1 {
   .partner-left {
     width: 100%;
   }
+  .tools-left {
+    display: none !important;
+  }
+  .tools-right {
+    display: block !important;
+    width: 100% !important;
+  }
+  .tools-nav {
+    justify-content: center;
+  }
+  .calc {
+    flex-wrap: wrap;
+  }
   .partner-nav > ul > li > a {
     padding-left: 0.5rem;
     padding-right: 0.5rem;
@@ -1454,6 +1498,9 @@ h1 {
     justify-content: center;
     align-items: center;
   }
+  .partner-description > ul {
+    list-style-type: none;
+  }
   .partner-header img {
     width: 100px;
   }
@@ -1467,7 +1514,7 @@ h1 {
   }
   .partner-back {
     display: flex;
-    justify-content: start;
+    justify-content: center;
   }
   .partner-back a {
     margin-bottom: 1rem;
