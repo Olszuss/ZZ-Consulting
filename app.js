@@ -26,17 +26,56 @@ app.use(express.static("public", options));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.set("view engine", "ejs");
 app.use(express.json());
+
+
 app.get("/", function (req, res) {
   res.sendFile(path.join(__dirname, "/index.html"));
 
 });
 
+app.get("/success", (req, res) => {
+  res.sendFile(path.join(__dirname, "/success.html"));
+});
+/******************************************** */
+//Tools
+/******************************************** */
+app.get("/narzedzia", (req, res) =>{
+  res.sendFile(path.join(__dirname, "/tools/tools.html"));
+});
+
+app.get("/narzedzia/wypowiedzenie-oc", (req,res) =>{
+  res.sendFile(path.join(__dirname, "/tools/wypowiedzenie-oc.html"))
+});
+app.post("/narzedzia/wypowiedzenie-oc", (req,res) => {
+  console.log(req.body);
+  res.send("Kiedyś zadziała! :)");
+});
+app.get("/narzedzia/kalkulator-kary", (req, res) =>{
+  res.sendFile(path.join(__dirname, "/tools/kalkulator-kary.html"));
+});
+app.get("/narzedzia/powiadomienie-o-zbyciu", (req,res) => {
+  res.sendFile(path.join(__dirname, "/tools/powiadomienie-o-zbyciu.html"));
+});
+app.get("/narzedzia/powiadomienie-o-wyrejestrowaniu", (req,res) => {
+  res.sendFile(path.join(__dirname, "/tools/powiadomienie-o-wyrejestrowaniu.html"));
+});
+// Other routes
+app.get("/about/", function (req, res) {
+  res.sendFile(path.join(__dirname, "/about.html"));
+});
+app.get("/forms/", function (req, res) {
+  res.sendFile(path.join(__dirname, "/forms.html"));
+});
+app.get("/robots.txt", function (req, res) {
+  res.sendFile(path.join(__dirname, "/robots.txt"));
+});
+app.get("/sitemap.xml", function (req, res) {
+  res.sendFile(path.join(__dirname, "/sitemap.xml"));
+});
 app.get("/contact", function (req, res) {
   res.sendFile(path.join(__dirname, "/contact.html"));
 });
-
-app.post(
-  "/contact",
+app.post("/contact",
   [
     check("name").notEmpty().withMessage("Imię jest wymagane!"),
     check("email").isEmail().withMessage("Nieprawidłowy adres email!"),
@@ -84,93 +123,38 @@ app.post(
     }
   }
 );
-
-app.get("/success", (req, res) => {
-  res.sendFile(path.join(__dirname, "/success.html"));
-});
-/******************************************** */
-//Tools
-/******************************************** */
-app.get("/narzedzia", (req, res) =>{
-  res.sendFile(path.join(__dirname, "/tools/tools.html"));
-});
-
-app.get("/narzedzia/wypowiedzenie-oc", (req,res) =>{
-  res.sendFile(path.join(__dirname, "/tools/wypowiedzenie-oc.html"))
-});
-app.post("/narzedzia/wypowiedzenie-oc", (req,res) => {
-  console.log(req.body);
-  res.send("Kiedyś zadziała! :)");
-});
-app.get("/narzedzia/kalkulator-kary", (req, res) =>{
-  res.sendFile(path.join(__dirname, "/tools/kalkulator-kary.html"));
-});
-app.get("/narzedzia/powiadomienie-o-zbyciu", (req,res) => {
-  res.sendFile(path.join(__dirname, "/tools/powiadomienie-o-zbyciu.html"));
-});
-app.get("/narzedzia/powiadomienie-o-wyrejestrowaniu", (req,res) => {
-  res.sendFile(path.join(__dirname, "/tools/powiadomienie-o-wyrejestrowaniu.html"));
-});
-
-app.get("/about/", function (req, res) {
-  res.sendFile(path.join(__dirname, "/about.html"));
-});
-app.get("/forms/", function (req, res) {
-  res.sendFile(path.join(__dirname, "/forms.html"));
-});
-
-app.get("/robots.txt", function (req, res) {
-  res.sendFile(path.join(__dirname, "/robots.txt"));
-});
-app.get("/sitemap.xml", function (req, res) {
-  res.sendFile(path.join(__dirname, "/sitemap.xml"));
-});
 /******************************************** */
 //Partners
 /******************************************** */
-app.get("/partnerzy/pzu/", function (req, res) {
-  res.sendFile(path.join(__dirname, "/partners/pzu.html"));
-});
-app.get("/partnerzy/allianz/", function (req, res) {
-  res.sendFile(path.join(__dirname, "/partners/allianz.html"));
-});
-app.get("/partnerzy/generali/", function (req, res) {
-  res.sendFile(path.join(__dirname, "/partners/generali.html"));
-});
-app.get("/partnerzy/hdi/", function (req, res) {
-  res.sendFile(path.join(__dirname, "/partners/hdi.html"));
-});
-app.get("/partnerzy/interrisk/", function (req, res) {
-  res.sendFile(path.join(__dirname, "/partners/interrisk.html"));
-});
-app.get("/partnerzy/link4/", function (req, res) {
-  res.sendFile(path.join(__dirname, "/partners/link4.html"));
-});
-app.get("/partnerzy/mtu/", function (req, res) {
-  res.sendFile(path.join(__dirname, "/partners/mtu.html"));
-});
-app.get("/partnerzy/proama/", function (req, res) {
-  res.sendFile(path.join(__dirname, "/partners/proama.html"));
-});
-app.get("/partnerzy/uniqa/", function (req, res) {
-  res.sendFile(path.join(__dirname, "/partners/uniqa.html"));
-});
-app.get("/partnerzy/warta/", function (req, res) {
-  res.sendFile(path.join(__dirname, "/partners/warta.html"));
-});
-app.get("/partnerzy/wiener/", function (req, res) {
-  res.sendFile(path.join(__dirname, "/partners/wiener.html"));
-});
-app.get("/partnerzy/ergo-hestia/", function (req, res) {
-  res.sendFile(path.join(__dirname, "/partners/ergo-hestia.html"));
+const partnersRoutes = [
+  "pzu",
+  "allianz",
+  "generali",
+  "hdi",
+  "interrisk",
+  "link4",
+  "mtu",
+  "proama",
+  "uniqa",
+  "warta",
+  "wiener",
+  "ergo-hestia",
+];
+
+partnersRoutes.forEach((partner) => {
+  app.get(`/partnerzy/${partner}`, (req, res) => {
+    res.sendFile(path.join(__dirname, `/partners/${partner}.html`));
+  });
+
 });
 app.get("/partnerzy/", function (req, res) {
   res.sendFile(path.join(__dirname, "/partners/partners.html"));
 });
-
+// 404 Route
 app.get("*", function (req, res) {
   res.sendFile(path.join(__dirname, "/404.html"));
 });
 
-app.listen(port);
-console.log("Server started at port: " + port);
+app.listen(port, () => {
+  console.log(`Server started at port: ${port}`);
+});
