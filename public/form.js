@@ -47,7 +47,6 @@ if (OCdays !== undefined && OCdays != null) {
 OCdays.addEventListener("change", () => {
   let typeOfCar = document.getElementById("car").value;
   let penalty = document.getElementById("penalty");
-  
   if (typeOfCar == "osobowy") {
       if (OCdays.value <= 3){
           penalty.value = 1440;

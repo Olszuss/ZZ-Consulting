@@ -17,7 +17,7 @@ let options = {
   redirect: true,
   setHeaders: function(res, path, stat) {
     res.set ({
-      'Cache-Control': (path.includes('index.html')) ? 'no-cache, max-age=3600000' : 'public, max-age=3600000'
+      'Cache-Control': (path.includes('index.ejs')) ? 'no-cache, max-age=3600000' : 'public, max-age=3600000'
     })
   }
 }
@@ -28,43 +28,43 @@ app.set("view engine", "ejs");
 app.use(express.json());
 
 
+contactCheck = [
+  check("name").notEmpty().withMessage("Imię jest wymagane!"),
+  check("email").isEmail().withMessage("Nieprawidłowy adres email!"),
+  check("subject").notEmpty().withMessage("Temat jest wymagany!"),
+  check("message").notEmpty().withMessage("Wiadomość jest wymagana!"),
+]
+
 app.get("/", function (req, res) {
-  res.sendFile(path.join(__dirname, "/index.html"));
-
+  res.render("../pages/index", {title: 'Index'});
 });
-
-app.get("/success", (req, res) => {
-  res.sendFile(path.join(__dirname, "/success.html"));
-});
-/******************************************** */
 //Tools
-/******************************************** */
 app.get("/narzedzia", (req, res) =>{
-  res.sendFile(path.join(__dirname, "/tools/tools.html"));
+  res.render("../pages/tools/tools", {title: 'Narzedzia'});
 });
 
 app.get("/narzedzia/wypowiedzenie-oc", (req,res) =>{
-  res.sendFile(path.join(__dirname, "/tools/wypowiedzenie-oc.html"))
+  res.render("../pages/tools/wypowiedzenie-oc", {title: 'Narzedzia'});
 });
 app.post("/narzedzia/wypowiedzenie-oc", (req,res) => {
   console.log(req.body);
   res.send("Kiedyś zadziała! :)");
 });
 app.get("/narzedzia/kalkulator-kary", (req, res) =>{
-  res.sendFile(path.join(__dirname, "/tools/kalkulator-kary.html"));
+  res.render("../pages/tools/kalkulator-kary", {title: 'Narzedzia'});
 });
 app.get("/narzedzia/powiadomienie-o-zbyciu", (req,res) => {
-  res.sendFile(path.join(__dirname, "/tools/powiadomienie-o-zbyciu.html"));
+  res.render("../pages/tools/powiadomienie-o-zbyciu", {title: 'Narzedzia'});
 });
 app.get("/narzedzia/powiadomienie-o-wyrejestrowaniu", (req,res) => {
-  res.sendFile(path.join(__dirname, "/tools/powiadomienie-o-wyrejestrowaniu.html"));
+  res.render("../pages/tools/powiadomienie-o-wyrejestrowaniu", {title: 'Narzedzia'});
 });
 // Other routes
-app.get("/about/", function (req, res) {
-  res.sendFile(path.join(__dirname, "/about.html"));
+app.get("/o-nas/", function (req, res) {
+  res.render("../pages/about" , {title: 'O-nas'});
 });
-app.get("/forms/", function (req, res) {
-  res.sendFile(path.join(__dirname, "/forms.html"));
+app.get("/druki/", function (req, res) {
+  res.render("../pages/forms", {title: 'Druki'});
 });
 app.get("/robots.txt", function (req, res) {
   res.sendFile(path.join(__dirname, "/robots.txt"));
@@ -72,21 +72,14 @@ app.get("/robots.txt", function (req, res) {
 app.get("/sitemap.xml", function (req, res) {
   res.sendFile(path.join(__dirname, "/sitemap.xml"));
 });
-app.get("/contact", function (req, res) {
-  res.sendFile(path.join(__dirname, "/contact.html"));
+app.get("/kontakt", function (req, res) {
+  res.render("../pages/contact", {title: 'Kontakt'});
 });
-app.post("/contact",
-  [
-    check("name").notEmpty().withMessage("Imię jest wymagane!"),
-    check("email").isEmail().withMessage("Nieprawidłowy adres email!"),
-    check("subject").notEmpty().withMessage("Temat jest wymagany!"),
-    check("message").notEmpty().withMessage("Wiadomość jest wymagana!"),
-  ],
-  (req, res) => {
+app.post("/kontakt",contactCheck,(req, res) => {
     const errors = validationResult(req);
 
     if (!errors.isEmpty()) {
-      res.render("contact", { errors: errors.mapped() });
+      res.render("contact", { title:'Kontakt', errors: errors.mapped() });
     } else {
       const transporter = nodemailer.createTransport({
         host: process.env.EMAIL_HOST,
@@ -101,9 +94,10 @@ app.post("/contact",
         from: process.env.EMAIL_USERNAME,
         to: process.env.EMAIL_RECEIVES,
         subject: req.body.subject,
-        html: `
-		<img src="http://node.olszus.usermd.net/resources/Icons/android-chrome-192x192.png">
-		<div style="text-align: center;">
+        html: 
+        `
+        <img src="http://node.olszus.usermd.net/resources/Icons/android-chrome-192x192.png">
+        <div style="text-align: center;">
         <h1>Otrzymano nową wiadomość z formularza kontaktowego!</h1>
         </div>
         <h2>Wiadomość od ${req.body.name} </h2>
@@ -123,9 +117,12 @@ app.post("/contact",
     }
   }
 );
-/******************************************** */
+app.get("/success", (req, res) => {
+  res.render("../pages/success");
+});
+
 //Partners
-/******************************************** */
+
 const partnersRoutes = [
   "pzu",
   "allianz",
@@ -143,16 +140,16 @@ const partnersRoutes = [
 
 partnersRoutes.forEach((partner) => {
   app.get(`/partnerzy/${partner}`, (req, res) => {
-    res.sendFile(path.join(__dirname, `/partners/${partner}.html`));
+    res.render(`../pages/partners/${partner}` , {title: "Partnerzy"});
   });
 
 });
 app.get("/partnerzy/", function (req, res) {
-  res.sendFile(path.join(__dirname, "/partners/partners.html"));
+  res.render("../pages/partners/partners", {title: "Partnerzy"});
 });
 // 404 Route
 app.get("*", function (req, res) {
-  res.sendFile(path.join(__dirname, "/404.html"));
+  res.render("../pages/404" , {title: "404"});
 });
 
 app.listen(port, () => {

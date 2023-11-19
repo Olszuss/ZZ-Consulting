@@ -1,0 +1,57 @@
+
+    <header>
+      <div class="contact-info">
+        <p>
+          <i class="fa-solid fa-phone"></i
+          ><a href="tel:+48 509 039 039">+48 509 039 039</a>
+        </p>
+        <p>
+          <i class="fa fa-envelope"></i>
+          <a href="mailto:zzubezpieczenia@gmail.com"
+            >zzubezpieczenia@gmail.com</a
+          >
+        </p>
+      </div>
+      <div class="header-container container">
+        <div class="logo-container">
+          <div class="logo">
+            <a href="/"
+              ><img src="/resources/logo.webp" alt="ZZ-Consulting Logo"
+            /></a>
+          </div>
+
+          <div class="mobile-menu">
+            <ul class="menu">
+              <li><a class="menuItem" href="/">Strona Główna</a></li>
+              <li><a class="menuItem" href="/about">O Nas</a></li>
+              <li><a class="menuItem" href="/forms">Druki</a></li>
+              <li><a class="menuItem" href="/partnerzy">Partnerzy</a></li>
+              <li><a class="menuItem" href="/narzedzia">Narzędzia</a></li>
+              <li><a class="menuItem" href="/contact">Kontakt</a></li>
+            </ul>
+            <div class="hamburger">
+              <i class="fa-solid fa-bars menuIcon"> </i>
+              <i class="fa-solid fa-x closeIcon"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <nav>
+      <ul class="nav-links container">
+        <li><a href="/" <% if (title === 'Index') { %>class="nav-active" <% } %> >Strona Główna</a></li>
+        <li><a href="/o-nas"<% if (title === 'O-nas') { %>class="nav-active" <% } %>>O Nas</a></li>
+        <li><a href="/druki"<% if (title === 'Druki') { %>class="nav-active" <% } %>>Druki</a></li>
+        <li><a href="/partnerzy"<% if (title === 'Partnerzy') { %>class="nav-active" <% } %>>Partnerzy</a></li>
+        <li><a href="/narzedzia"<% if (title === 'Narzedzia') { %>class="nav-active" <% } %>>Narzędzia</a>
+          <ul>
+            <a href="/narzedzia/wypowiedzenie-oc"><li class="on-hover-menu">Wypowiedzenie ubezpieczenia oc online</li></a>
+            <a href="/narzedzia/powiadomienie-o-zbyciu"><li class="on-hover-menu">Powiadomienie o zbyciu pojazdu</li></a>
+            <a href="/narzedzia/powiadomienie-o-wyrejestrowaniu"><li class="on-hover-menu">Powiadomienie o wyrejestrowaniu pojazdu</li></a>
+            <a href="https://www.compero.pl/kalkulator_polis/p/MjAyMTg1LWM2YmE="><li class="on-hover-menu">Kalkulator oc online</li></a>
+            <a href="/narzedzia/kalkulator-kary"><li class="on-hover-menu">Kalkulator kary za brak oc</li></a>
+          </ul>
+        </li>
+        <li><a href="/kontakt"<% if (title === 'Kontakt') { %>class="nav-active" <% } %>>Kontakt</a></li>
+      </ul>
+    </nav>

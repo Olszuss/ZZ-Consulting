@@ -8,9 +8,9 @@
       content="Agencja ubezpieczeniowa to miejsce, gdzie możesz uzyskać informacje i zakupić różnego rodzaju ubezpieczenia."
     />
     <title>ZZ-Consulting Kontakt</title>
-    <%-include ('header'); %>
 
-    <%- include('nav'); %>
+    <%- include ('../views/header') %>
+    <%- include('../views/nav'); %>
 
     <section id="contact">
       <h1>Kontakt</h1>
@@ -27,9 +27,6 @@
                 class="contact-input"
                 placeholder="Imię i Nazwisko"
               />
-              <% if(errors && errors.name) { %>
-              <span class="text-danger"><%= errors.name.msg %></span>
-              <% } %>
               <input
                 name="email"
                 id="email"
@@ -37,9 +34,6 @@
                 class="contact-input"
                 placeholder="E-mail"
               />
-              <% if (errors && errors.email) { %>
-              <span class="text-danger"><%= errors.email.msg %></span>
-              <% } %>
               <input
                 name="subject"
                 id="subject"
@@ -47,18 +41,12 @@
                 class="contact-input"
                 placeholder="Temat"
               />
-              <% if (errors && errors.subject) { %>
-              <span class="text-danger"><%= errors.subject.msg %></span>
-              <% } %>
               <textarea
                 name="message"
                 id="message"
                 class="contact-input"
                 placeholder="Wiadomość"
               ></textarea>
-              <% if(errors && errors.message) { %>
-              <span class="text-danger"><%= errors.message.msg %></span>
-              <% } %>
               <input type="submit" value="WYŚLIJ" />
             </form>
           </div>
@@ -96,8 +84,8 @@
       </div>
     </section>
 
-    <%- include('footer'); %>
-    
+    <%- include('../views/footer'); %>
+
     <script src="/script.js"></script>
   </body>
 </html>

@@ -8,124 +8,11 @@
       content="Agencja ubezpieczeniowa to miejsce, gdzie możesz uzyskać informacje i zakupić różnego rodzaju ubezpieczenia."
     />
     <title>ZZ-Consulting Strona Główna</title>
-    <link rel="stylesheet" href="css/style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.0.9/dist/css/splide.min.css"
-    />
-    <script
-      src="https://kit.fontawesome.com/165dd52d1d.js"
-      crossorigin="anonymous"
-    ></script>
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="/resources/Icons/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="192x192"
-      href="/resources/Icons/android-chrome-192x192.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="512x512"
-      href="/resources/Icons/android-chrome-512x512.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="/resources/Icons/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="/resources/Icons/favicon-16x16.png"
-    />
-    <link rel="manifest" href="/resources/Icons/site.webmanifest" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Tangerine:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <header>
-      <div class="contact-info">
-        <p>
-          <i class="fa-solid fa-phone"></i
-          ><a href="tel:+48 509 039 039">+48 509 039 039</a>
-        </p>
-        <p>
-          <i class="fa fa-envelope"></i>
-          <a href="mailto:zzubezpieczenia@gmail.com"
-            >zzubezpieczenia@gmail.com</a
-          >
-        </p>
-      </div>
-      <div class="header-container container">
-        <div class="logo-container">
-          <div class="logo">
-            <a href="/"
-              ><img src="/resources/logo.webp" alt="ZZ-Consulting Logo"
-            /></a>
-          </div>
+    <link rel="stylesheet" href="/css/splide-default.min.css" />
+    
+    <%- include ('../views/header') %>
+    <%- include('../views/nav'); %>
 
-          <div class="mobile-menu">
-            <ul class="menu">
-              <li><a class="menuItem" href="/">Strona Główna</a></li>
-              <li><a class="menuItem" href="/about">O Nas</a></li>
-              <li><a class="menuItem" href="/forms">Druki</a></li>
-              <li><a class="menuItem" href="/partnerzy">Partnerzy</a></li>
-              <li><a class="menuItem" href="/narzedzia">Narzędzia</a></li>
-              <li><a class="menuItem" href="/contact">Kontakt</a></li>
-            </ul>
-            <div class="hamburger">
-              <i class="fa-solid fa-bars menuIcon"> </i>
-              <i class="fa-solid fa-x closeIcon"></i>
-            </div>
-          </div>
-        </div>
-      </div>
-    </header>
-    <nav>
-      <ul class="nav-links container">
-        <li><a href="/" class="nav-active">Strona Główna</a></li>
-        <li><a href="/about">O Nas</a></li>
-        <li><a href="/forms">Druki</a></li>
-        <li><a href="/partnerzy">Partnerzy</a></li>
-        <li>
-          <a href="/narzedzia">Narzędzia</a>
-          <ul>
-            <a href="/narzedzia/wypowiedzenie-oc"
-              ><li class="on-hover-menu">
-                Wypowiedzenie ubezpieczenia oc online
-              </li></a
-            >
-            <a href="/narzedzia/powiadomienie-o-zbyciu"
-              ><li class="on-hover-menu">Powiadomienie o zbyciu pojazdu</li></a
-            >
-            <a href="/narzedzia/powiadomienie-o-wyrejestrowaniu"
-              ><li class="on-hover-menu">
-                Powiadomienie o wyrejestrowaniu pojazdu
-              </li></a
-            >
-            <a href="https://www.compero.pl/kalkulator_polis/p/MjAyMTg1LWM2YmE="
-              ><li class="on-hover-menu">Kalkulator oc online</li></a
-            >
-            <a href="/narzedzia/kalkulator-kary"
-              ><li class="on-hover-menu">Kalkulator kary za brak oc</li></a
-            >
-          </ul>
-        </li>
-        <li><a href="/contact">Kontakt</a></li>
-      </ul>
-    </nav>
     <section id="choose-us">
       <div id="company-description" class="company-description-container">
         <h1>ubezpieczenia ZZ Consulting</h1>
@@ -408,51 +295,9 @@
       </div>
     </section>
 
-    <footer>
-      <div class="footer container">
-        <div class="footer-right">
-          <img src="/resources/logo.webp" alt="logo" />
-        </div>
-        <div class="footer-center-left">
-          <p>Ubezpieczenia ZZ-Consulting</p>
-          <p>41-506 Chorzów</p>
-          <p>ul.Podmiejska 34/U1</p>
-        </div>
-        <div class="footer-center-right">
-          <p>Godziny otwarcia:</p>
-          <p>Pn: 9:00 - 19:00</p>
-          <p>Wt-Pt: 9:00 - 17:00</p>
-        </div>
-        <div class="footer-nav">
-          <ul>
-            <li><a href="/">Strona główna</a></li>
-            <li><a href="/about">O nas</a></li>
-            <li><a href="/forms">Druki</a></li>
-            <li><a href="/partnerzy">Partnerzy</a></li>
-            <li><a href="/narzedzia">Narzędzia</a></li>
-            <li><a href="/contact">Kontakt</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-last">
-        <div class="footer-copy container">
-          <span
-            >&copy; 2023 <a href="/">ZZ-Consulting</a>.<br />Wszystkie prawa
-            zastrzeżone.</span
-          >
-          <p>
-            Created by
-            <a href="#"
-              ><img src="/resources/AODesign.webp" alt="AODesign logotype"
-            /></a>
-          </p>
-        </div>
-      </div>
-    </footer>
-    <i id="pageUp" class="fa-solid fa-circle-arrow-up"></i>
+    <%- include('../views/footer'); %>
 
     <script src="script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.0.9/dist/js/splide.min.js"></script>
     <script type="module" src="/splide.js"></script>
   </body>
 </html>
