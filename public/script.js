@@ -60,8 +60,8 @@ function checkScroll() {
 
   let distanceToFooter = footerTop - windowHeight;
 
-  if (distanceToFooter < 0) {
-    backToTopBtn.style.bottom = 20 - distanceToFooter + "px";
+  if (distanceToFooter < -180) {
+    backToTopBtn.style.bottom = -180 - distanceToFooter + "px";
   } else {
     backToTopBtn.style.bottom = "20px";
   }
