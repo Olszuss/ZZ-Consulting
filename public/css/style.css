@@ -1021,6 +1021,13 @@ h1 {
   opacity: 0;
 }
 
+.mobile-faq {
+  display: none;
+}
+
+#dictionary {
+  margin-top: 2rem;
+}
 .reveal.active {
   opacity: 1;
 }
@@ -1636,5 +1643,23 @@ h1 {
   .car-right-site > img {
     width: 250px;
     height: auto;
+  }
+  .mobile-faq {
+    display: flex;
+    margin: auto;
+    justify-content: space-around;
+  }
+  .mobile-faq > a {
+    text-decoration: none;
+  }
+  .mobile-faq > a > button {
+    background-color: #005796;
+    font-size: 1.2rem;
+  }
+  .mobile-faq > a > button:hover {
+    box-shadow: 0 0.5em 1.5em -0.5em #005796;
+  }
+  #dictionary > div > div >.partner-back {
+    display: none;
   }
 }

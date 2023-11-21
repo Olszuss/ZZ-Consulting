@@ -42,7 +42,6 @@ app.get("/", function (req, res) {
 app.get("/narzedzia", (req, res) =>{
   res.render("../pages/tools/tools", {title: 'Narzedzia'});
 });
-
 app.get("/narzedzia/wypowiedzenie-oc", (req,res) =>{
   res.render("../pages/tools/wypowiedzenie-oc", {title: 'Narzedzia'});
 });
@@ -58,6 +57,12 @@ app.get("/narzedzia/powiadomienie-o-zbyciu", (req,res) => {
 });
 app.get("/narzedzia/powiadomienie-o-wyrejestrowaniu", (req,res) => {
   res.render("../pages/tools/powiadomienie-o-wyrejestrowaniu", {title: 'Narzedzia'});
+});
+app.get("/faq/slownik-pojec", (req, res) => {
+  res.render("../pages/faq/slownik-pojec", {title: 'Faq'});
+});
+app.get("/faq/", (req, res) => {
+  res.render("../pages/faq/faq", {title: 'Faq'});
 });
 // Other routes
 app.get("/o-nas/", function (req, res) {
