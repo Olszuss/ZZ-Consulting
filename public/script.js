@@ -1,5 +1,5 @@
-//Get current year to footer
-document.getElementById('year').innerHTML = new Date().getFullYear();
+
+document.getElementById("year").innerHTML = new Date().getFullYear();
 
 //Reveal animation
 function reveal() {
