@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Generator wypowiedzenia OC. Wypełnij formularz internetowo, wydrukuj i wyślij gotowy formularz z danymi!"
+    />
+    <title>ZZ-Consulting Wypowiedzenie OC</title>
+    
+    <%- include ('../../views/header') %>
+    <%- include('../../views/nav'); %>
+
+    <section id="tools">
+      <h1>Narzędzia</h1>
+      <div class="partner-container">
+        <div class="partner-box container">
+          <div class="partner-left">
+            <div class="partner-description-box">
+              <div class="partner-description">
+                <h3>Wypowiedzenie ubezpieczenia OC</h3>
+                <span
+                  >Wypełnij formularz, a następnie kliknij przycisk Generuj aby
+                  wygenerować Twój formularz.
+                </span>
+                <div class="form-container">
+                  <form action="#" method="POST">
+                    <h3>Miejscowość i data</h3>
+                    <label for="city">Miejscowość</label>
+                    <input
+                      type="text"
+                      id="city"
+                      name="city"
+                      class="tools-input"
+                      required
+                    />
+
+                    <label for="city">Data</label>
+                    <input
+                      type="date"
+                      id="date"
+                      name="date"
+                      class="tools-input"
+                      required
+                    />
+
+                    <h3>Właściciel</h3>
+
+                    <label for="owner-name"
+                      >Imię i nazwisko lub nazwa firmy</label
+                    >
+                    <input
+                      type="text"
+                      name="owner-name"
+                      id="owner-name"
+                      class="tools-input"
+                      required
+                    />
+                    <label for="owner-street">Ulica</label>
+                    <input
+                      type="text"
+                      name="owner-street"
+                      id="owner-street"
+                      class="tools-input"
+                      required
+                    />
+                    <label for="owner-street-number">Numer</label>
+                    <input
+                      type="text"
+                      name="owner-street-number"
+                      id="owner-street-number"
+                      class="tools-input"
+                      required
+                    />
+                    <label for="owner-zip-code">Kod pocztowy</label>
+                    <input
+                      type="text"
+                      name="owner-zip-code"
+                      id="owner-zip-code"
+                      class="tools-input"
+                      placeholder="00-000"
+                      required
+                    />
+                    <label for="owner-city">Miejscowość</label>
+                    <input
+                      type="text"
+                      name="owner-city"
+                      id="owner-city"
+                      class="tools-input"
+                      required
+                    />
+                    <label for="owner-pesel">Pesel, Regon</label>
+                    <input
+                      type="text"
+                      name="owner-pesel"
+                      id="owner-pesel"
+                      class="tools-input"
+                      required
+                    />
+
+                    <h3>Ubezpieczyciel</h3>
+
+                    <label for="insurer-name">Ubezpieczyciel</label>
+                    <input
+                      list="insurer-name-choice"
+                      name="insurer-name"
+                      id="insurer-name"
+                      class="tools-input"
+                      required
+                    />
+                    <datalist id="insurer-name-choice">
+                      <option value="ALLIANZ POLSKA S.A."></option>
+                      <option value="GENERALI T.U. S.A."></option>
+                      <option
+                        value="INTERRISK TU S.A. Vienna Insurance Group"
+                      ></option>
+                      <option
+                        value="HDI Asekuracja Towarzystwo Ubezpieczeń S.A."
+                      ></option>
+                      <option value="LINK4 TU S.A."></option>
+                      <option
+                        value="INTERRISK TU S.A. Vienna Insurance Group"
+                      ></option>
+                      <option value="PROAMA"></option>
+                      <option value="PZU SA"></option>
+                      <option value="UNIQA TU S.A."></option>
+                      <option value="TUiR WARTA S.A."></option>
+                      <option value="Wiener TU S.A."></option>
+                      <option value="STU ERGO HESTIA S.A."></option>
+                    </datalist>
+                    <label for="insurer-street">Ulica</label>
+                    <input
+                      type="text"
+                      name="insurer-street"
+                      id="insurer-street"
+                      class="tools-input"
+                      required
+                    />
+                    <label for="insurer-street-number">Numer</label>
+                    <input
+                      type="text"
+                      name="insurer-street-number"
+                      id="insurer-street-number"
+                      class="tools-input"
+                      required
+                    />
+                    <label for="insurer-zip-code">Kod pocztowy</label>
+                    <input
+                      type="text"
+                      name="insurer-zip-code"
+                      id="insurer-zip-code"
+                      class="tools-input"
+                      placeholder="00-000"
+                      required
+                    />
+                    <label for="insurer-city">Miejscowość</label>
+                    <input
+                      type="text"
+                      name="insurer-city"
+                      id="insurer-city"
+                      class="tools-input"
+                      required
+                    />
+                    <h3>Dane pojazdu</h3>
+                    <label for="car-model">Marka, model</label>
+                    <input
+                      type="text"
+                      name="car-model"
+                      id="car-model"
+                      class="tools-input"
+                      required
+                    />
+                    <label for="car-registration-number"
+                      >Numer rejestracyjny</label
+                    >
+                    <input
+                      type="text"
+                      name="car-registration-number"
+                      id="car-registration-number"
+                      class="tools-input"
+                      required
+                    />
+                    <label for="vin-number">Numer VIN</label>
+                    <input
+                      type="text"
+                      name="vin-number"
+                      id="vin-number"
+                      class="tools-input"
+                      required
+                    />
+                    <span class="wrongVin"> </span>
+                    <h3>Dane polisy</h3>
+                    <label for="insurance-number">Numer polisy</label>
+                    <input
+                      type="text"
+                      name="insurance-number"
+                      id="insurance-number"
+                      class="tools-input"
+                      required
+                    />
+                    Okres ubezpieczenia <br />
+                    <div>
+                      <label for="date-from">Od</label>
+                      <input
+                        type="date"
+                        name="date-from"
+                        id="date-from"
+                        class="tools-input"
+                        required
+                      />
+                      <label for="date-to">Do</label>
+                      <input
+                        type="date"
+                        name="date-to"
+                        id="date-to"
+                        class="tools-input"
+                        required
+                      />
+                    </div>
+                    <button type="submit">Generuj PDF</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="partner-back">
+            <a class="js-back"><i class="fa-solid fa-angles-left"></i></a>
+          </div>
+          <div class="partner-right">
+            <div class="tools-nav">
+              <ul>
+                <li><h2>Dokumenty:</h2></li>
+                <li class="partner-active">
+                  <a href="/narzedzia/wypowiedzenie-oc"
+                    >Wypowiedzenie ubezpieczenia oc online</a
+                  >
+                </li>
+                <li>
+                  <a href="/narzedzia/powiadomienie-o-zbyciu"
+                    >Powiadomienie o zbyciu pojazdu</a
+                  >
+                </li>
+                <li>
+                  <a href="/narzedzia/powiadomienie-o-wyrejestrowaniu"
+                    >Powiadomienie o wyrejestrowaniu pojazdu</a
+                  >
+                </li>
+                <li>
+                  <a href="/narzedzia">Instrukcja wypełniania formularzy</a>
+                </li>
+                <li><h2>Kalkulatory:</h2></li>
+                <li>
+                  <a href="/narzedzia/kalkulator-kary"
+                    >Kalkulator kary za brak oc</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://www.compero.pl/kalkulator_polis/p/MjAyMTg1LWM2YmE="
+                    >Kalkulator polis online</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <%- include('../../views/footer'); %>
+
+    <script src="/script.js"></script>
+    <script src="/form.js"></script>
+  </body>
+</html>

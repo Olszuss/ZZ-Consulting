@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Agencja ubezpieczeniowa to miejsce, gdzie możesz uzyskać informacje i zakupić różnego rodzaju ubezpieczenia."
+    />
+    <title>ZZ-Consulting Narzędzia</title>
+  <%- include ('../../views/header') %>
+  <%- include('../../views/nav'); %>
+
+    <section id="tools">
+      <h1>Narzędzia</h1>
+      <div class="partner-container">
+        <div class="partner-box container">
+          <div class="partner-left tools-left">
+            <div class="partner-description-box">
+              <div class="partner-description">
+                <h3>Instrukcja Wypełniania Formularzy Online</h3>
+
+                <ol>
+                    <li><strong>Wypełnianie Pól Tekstowych:</strong>
+                        <ul>
+                            <li>Wypełnij pola tekstowe formularza zgodnie z danymi dotyczącymi ubezpieczającego i ubezpieczonego.</li>
+                            <li>Sprawdź, czy dane są poprawne i zgodne z rzeczywistością.</li>
+                        </ul>
+                    </li>
+                
+                    <li><strong>Uzyskiwanie Automatycznych Podpowiedzi dla Nazwy Ubezpieczyciela:</strong>
+                        <ul>
+                            <li>W polu tekstowym "Ubezpieczyciel", wpisz pierwsze litery nazwy ubezpieczyciela.</li>
+                            <li>Automatycznie pojawią się podpowiedzi z nazwami towarzystw ubezpieczeniowych.</li>
+                            <li>Wybierz odpowiednią nazwę używając myszki, przycisku ENTER lub TAB na klawiaturze.</li>
+                        </ul>
+                    </li>
+                
+                    <li><strong>Wypełnianie Danych Adresowych i Innych:</strong>
+                        <ul>
+                            <li>Pozostałe pola zostaną automatycznie uzupełnione na podstawie wybranej nazwy ubezpieczyciela.</li>
+                            <li>Możesz także wypełnić dane ręcznie, jeśli to konieczne.</li>
+                        </ul>
+                    </li>
+                
+                    <li><strong>Generowanie Dokumentu PDF:</strong>
+                        <ul>
+                            <li>Po wypełnieniu formularza, kliknij przycisk "Generuj".</li>
+                            <li>System automatycznie stworzy dokument w formacie PDF z wprowadzonymi danymi.</li>
+                        </ul>
+                    </li>
+                
+                    <li><strong>Sprawdzanie Poprawności Danych:</strong>
+                        <ul>
+                            <li>Przed wygenerowaniem dokumentu, zweryfikuj poprawność wszystkich danych.</li>
+                        </ul>
+                    </li>
+                
+                    <li><strong>Pobieranie i Drukowanie:</strong>
+                        <ul>
+                            <li>Po wygenerowaniu, kliknij opcję "Pobierz" lub "Drukuj", aby zapisać plik PDF na swoim urządzeniu.</li>
+                            <li>Następnie wydrukuj dokument i podpisz go.</li>
+                        </ul>
+                    </li>
+                
+                    <li><strong>Przesyłanie do Ubezpieczyciela:</strong>
+                        <ul>
+                            <li>Wysyłaj wygenerowany dokument do właściwego ubezpieczyciela, zgodnie z informacjami zawartymi w instrukcjach danego formularza.</li>
+                        </ul>
+                    </li>
+                
+                    <li><strong>Uwagi dotyczące Nazwy Ubezpieczyciela:</strong>
+                        <ul>
+                            <li>Niektóre ubezpieczyciela posługują się marką handlową, więc warto podać obie nazwy – marki handlowej i właściwej.</li>
+                        </ul>
+                    </li>
+                
+                    <li><strong>Sprawdzenie Danych Adresowych:</strong>
+                        <ul>
+                            <li>Upewnij się co do poprawności danych adresowych, można to zweryfikować na stronie internetowej ubezpieczyciela lub na stronie Komisji Nadzoru Finansowego.</li>
+                        </ul>
+                    </li>
+                
+                    <li><strong>Odpowiedzialność za Poprawność Danych:</strong>
+                        <ul>
+                            <li>Pamiętaj, że za poprawność danych adresowych odpowiada ubezpieczyciel, ale zawsze warto zweryfikować je samodzielnie.</li>
+                        </ul>
+                    </li>
+                </ol>              </div>
+            </div>
+          </div>
+          <div class="partner-back">
+            <a class="js-back"><i class="fa-solid fa-angles-left"></i></a>
+          </div>
+          <div class="partner-right tools-right">
+            <div class="tools-nav">
+              <ul>
+                <li><h2>Dokumenty:</h2></li>
+                <li><a href="/narzedzia/wypowiedzenie-oc">Wypowiedzenie ubezpieczenia oc online</a></li></li></a>
+                <li><a href="/narzedzia/powiadomienie-o-zbyciu">Powiadomienie o zbyciu pojazdu</a></li></li></a>
+                <li><a href="/narzedzia/powiadomienie-o-wyrejestrowaniu">Powiadomienie o wyrejestrowaniu pojazdu</a></li></li></a>
+                <li class="partner-active"><a href="/narzedzia">Instrukcja wypełniania formularzy</a></li></li></a>
+                <li><h2>Kalkulatory:</h2></li>
+                <li><a href="/narzedzia/kalkulator-kary">Kalkulator kary za brak oc</a></li></li></a>
+                <li><a href="https://www.compero.pl/kalkulator_polis/p/MjAyMTg1LWM2YmE=">Kalkulator polis online</a></li></li></a>
+
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <%- include('../../views/footer'); %>
+
+    <script src="script.js"></script>
+  </body>
+</html>

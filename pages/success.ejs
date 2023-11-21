@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Agencja ubezpieczeniowa to miejsce, gdzie możesz uzyskać informacje i zakupić różnego rodzaju ubezpieczenia."
+    />
+    <title>ZZ-Consulting Kontakt</title>
+
+    <%- include ('../views/header') %>
+    <%- include('../views/nav'); %>
+    
+    <ul class="nav-links container">
+        <li><a href="/">Strona Główna</a></li>
+        <li><a href="/about">O Nas</a></li>
+        <li><a href="/forms">Druki</a></li>
+        <li><a href="/partnerzy">Partnerzy</a></li>
+        <li><a href="/gugu">Narzędzia</a></li>
+        <li><a href="/contact" class="nav-active">Kontakt</a></li>
+      </ul>
+    </nav>
+
+    <section id="success" class="container center">
+      <h1>Poprawnie wysłano Email!</h1>
+      <h1>Odpowiemy tak szybko jak to możliwe!</h1>
+      <a href="/">
+        <i class="fa-solid fa-angles-left"></i> Wróć na stronę główną
+        <i class="fa-solid fa-angles-left"></i
+      ></a>
+      <div></div>
+    </section>
+
+    <%- include('../views/footer'); %>
+
+    <script src="/script.js"></script>
+  </body>
+</html>

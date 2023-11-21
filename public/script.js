@@ -1,10 +1,13 @@
+
+document.getElementById("year").innerHTML = new Date().getFullYear();
+
 //Reveal animation
 function reveal() {
   let reveals = document.querySelectorAll(".reveal");
   for (let i = 0; i < reveals.length; i++) {
     let windowHeight = window.innerHeight;
     let elementTop = reveals[i].getBoundingClientRect().top;
-    let elementVisible = 250;
+    let elementVisible = 100;
     if (elementTop < windowHeight - elementVisible) {
       reveals[i].classList.add("active");
     }
@@ -12,29 +15,29 @@ function reveal() {
 }
 window.addEventListener("scroll", reveal);
 //Hamburger Menu
-const menu = document.querySelector(".menu");
-const menuItems = document.querySelectorAll(".menuItem");
-const hamburger = document.querySelector(".hamburger");
-const closeIcon = document.querySelector(".closeIcon");
-const menuIcon = document.querySelector(".menuIcon");
+const a = document.querySelector(".menu");
+const aItems = document.querySelectorAll(".menuItem");
+const b = document.querySelector(".hamburger");
+const c = document.querySelector(".closeIcon");
+const aIcon = document.querySelector(".menuIcon");
 
 function toggleMenu() {
-  if (menu.classList.contains("showMenu")) {
-    menu.classList.remove("showMenu");
-    closeIcon.style.display = "none";
-    hamburger.style.position = "fixed";
-    menuIcon.style.display = "block";
+  if (a.classList.contains("showMenu")) {
+    a.classList.remove("showMenu");
+    c.style.display = "none";
+    b.style.position = "fixed";
+    aIcon.style.display = "block";
   } else {
-    menu.classList.add("showMenu");
-    closeIcon.style.display = "block";
-    hamburger.style.position = "fixed";
-    menuIcon.style.display = "none";
+    a.classList.add("showMenu");
+    c.style.display = "block";
+    b.style.position = "fixed";
+    aIcon.style.display = "none";
   }
 }
 
-hamburger.addEventListener("click", toggleMenu);
-menuItems.forEach(function (menuItem) {
-  menuItem.addEventListener("click", toggleMenu);
+b.addEventListener("click", toggleMenu);
+aItems.forEach(function (aItem) {
+  aItem.addEventListener("click", toggleMenu);
 });
 
 //Page Up Button
@@ -57,8 +60,8 @@ function checkScroll() {
 
   let distanceToFooter = footerTop - windowHeight;
 
-  if (distanceToFooter < 0) {
-    backToTopBtn.style.bottom = 20 - distanceToFooter + "px";
+  if (distanceToFooter < -180) {
+    backToTopBtn.style.bottom = -180 - distanceToFooter + "px";
   } else {
     backToTopBtn.style.bottom = "20px";
   }

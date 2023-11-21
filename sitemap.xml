@@ -1,167 +1,193 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
-
-
+		<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-  <loc>http://node.olszus.usermd.net/</loc>
-  <lastmod>2023-11-11T17:50:03+00:00</lastmod>
-  <priority>1.00</priority>
+	<loc>http://node.olszus.usermd.net/</loc>
+	<lastmod>2023-11-20T22:02:13+01:00</lastmod>
+	<priority>1.0</priority>
 </url>
 <url>
-  <loc>http://node.olszus.usermd.net/about</loc>
-  <lastmod>2023-11-12T11:00:51+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>http://node.olszus.usermd.net/about</loc>
+	<lastmod>2023-11-20T22:02:13+01:00</lastmod>
+	<priority>1.0</priority>
 </url>
 <url>
-  <loc>http://node.olszus.usermd.net/forms</loc>
-  <lastmod>2023-11-11T17:50:03+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>http://node.olszus.usermd.net/forms</loc>
+	<lastmod>2023-11-20T22:02:13+01:00</lastmod>
+	<priority>1.0</priority>
 </url>
 <url>
-  <loc>http://node.olszus.usermd.net/partnerzy</loc>
-  <lastmod>2023-11-11T17:49:54+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>http://node.olszus.usermd.net/partnerzy</loc>
+	<lastmod>2023-11-20T22:02:13+01:00</lastmod>
+	<priority>1.0</priority>
 </url>
 <url>
-  <loc>http://node.olszus.usermd.net/contact</loc>
-  <lastmod>2023-11-11T17:50:03+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>http://node.olszus.usermd.net/narzedzia</loc>
+	<lastmod>2023-11-20T22:02:13+01:00</lastmod>
+	<priority>1.0</priority>
 </url>
 <url>
-  <loc>http://node.olszus.usermd.net/gugu</loc>
-  <lastmod>2023-11-11T17:50:03+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>http://node.olszus.usermd.net/contact</loc>
+	<lastmod>2023-11-20T22:02:13+01:00</lastmod>
+	<priority>1.0</priority>
 </url>
 <url>
-  <loc>http://node.olszus.usermd.net/partnerzy/allianz/</loc>
-  <lastmod>2023-11-11T17:49:54+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>http://node.olszus.usermd.net/o-nas</loc>
+	<lastmod>2023-11-20T22:02:13+01:00</lastmod>
+	<priority>1.0</priority>
 </url>
 <url>
-  <loc>http://node.olszus.usermd.net/partnerzy/generali/</loc>
-  <lastmod>2023-11-11T17:49:54+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>http://node.olszus.usermd.net/druki</loc>
+	<lastmod>2023-11-20T22:02:13+01:00</lastmod>
+	<priority>1.0</priority>
 </url>
 <url>
-  <loc>http://node.olszus.usermd.net/partnerzy/hdi/</loc>
-  <lastmod>2023-11-11T17:49:54+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>http://node.olszus.usermd.net/narzedzia/wypowiedzenie-oc</loc>
+	<lastmod>2023-11-20T22:02:13+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>http://node.olszus.usermd.net/partnerzy/interrisk/</loc>
-  <lastmod>2023-11-11T17:49:54+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>http://node.olszus.usermd.net/narzedzia/powiadomienie-o-zbyciu</loc>
+	<lastmod>2023-11-20T22:02:13+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>http://node.olszus.usermd.net/partnerzy/link4/</loc>
-  <lastmod>2023-11-11T17:49:54+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>http://node.olszus.usermd.net/narzedzia/powiadomienie-o-wyrejestrowaniu</loc>
+	<lastmod>2023-11-20T22:02:13+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>http://node.olszus.usermd.net/partnerzy/mtu/</loc>
-  <lastmod>2023-11-11T17:49:54+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>http://node.olszus.usermd.net/narzedzia/kalkulator-kary</loc>
+	<lastmod>2023-11-20T22:02:13+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>http://node.olszus.usermd.net/partnerzy/proama/</loc>
-  <lastmod>2023-11-11T17:49:54+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>http://node.olszus.usermd.net/kontakt</loc>
+	<lastmod>2023-11-20T22:02:13+01:00</lastmod>
+	<priority>1.0</priority>
 </url>
 <url>
-  <loc>http://node.olszus.usermd.net/partnerzy/pzu/</loc>
-  <lastmod>2023-11-11T17:49:54+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>http://node.olszus.usermd.net/partnerzy/allianz/</loc>
+	<lastmod>2023-11-20T22:02:13+01:00</lastmod>
+	<priority>0.6</priority>
 </url>
 <url>
-  <loc>http://node.olszus.usermd.net/partnerzy/uniqa/</loc>
-  <lastmod>2023-11-11T17:49:55+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>http://node.olszus.usermd.net/partnerzy/generali/</loc>
+	<lastmod>2023-11-20T22:02:13+01:00</lastmod>
+	<priority>0.6</priority>
 </url>
 <url>
-  <loc>http://node.olszus.usermd.net/partnerzy/warta/</loc>
-  <lastmod>2023-11-11T17:49:55+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>http://node.olszus.usermd.net/partnerzy/hdi/</loc>
+	<lastmod>2023-11-20T22:02:13+01:00</lastmod>
+	<priority>0.6</priority>
 </url>
 <url>
-  <loc>http://node.olszus.usermd.net/partnerzy/wiener/</loc>
-  <lastmod>2023-11-11T17:49:55+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>http://node.olszus.usermd.net/partnerzy/interrisk/</loc>
+	<lastmod>2023-11-20T22:02:13+01:00</lastmod>
+	<priority>0.6</priority>
 </url>
 <url>
-  <loc>http://node.olszus.usermd.net/partnerzy/ergo/</loc>
-  <lastmod>2023-11-11T17:50:03+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>http://node.olszus.usermd.net/partnerzy/link4/</loc>
+	<lastmod>2023-11-20T22:02:13+01:00</lastmod>
+	<priority>0.6</priority>
 </url>
 <url>
-  <loc>http://node.olszus.usermd.net/partnerzy/allianz</loc>
-  <lastmod>2023-11-11T17:49:54+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>http://node.olszus.usermd.net/partnerzy/mtu/</loc>
+	<lastmod>2023-11-20T22:02:13+01:00</lastmod>
+	<priority>0.6</priority>
 </url>
 <url>
-  <loc>http://node.olszus.usermd.net/partnerzy/ergo-hestia</loc>
-  <lastmod>2023-11-11T17:49:54+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>http://node.olszus.usermd.net/partnerzy/proama/</loc>
+	<lastmod>2023-11-20T22:02:13+01:00</lastmod>
+	<priority>0.6</priority>
 </url>
 <url>
-  <loc>http://node.olszus.usermd.net/partnerzy/generali</loc>
-  <lastmod>2023-11-11T17:49:54+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>http://node.olszus.usermd.net/partnerzy/pzu/</loc>
+	<lastmod>2023-11-20T22:02:13+01:00</lastmod>
+	<priority>0.6</priority>
 </url>
 <url>
-  <loc>http://node.olszus.usermd.net/partnerzy/hdi</loc>
-  <lastmod>2023-11-11T17:49:54+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>http://node.olszus.usermd.net/partnerzy/uniqa/</loc>
+	<lastmod>2023-11-20T22:02:13+01:00</lastmod>
+	<priority>0.6</priority>
 </url>
 <url>
-  <loc>http://node.olszus.usermd.net/partnerzy/interrisk</loc>
-  <lastmod>2023-11-11T17:49:54+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>http://node.olszus.usermd.net/partnerzy/warta/</loc>
+	<lastmod>2023-11-20T22:02:13+01:00</lastmod>
+	<priority>0.6</priority>
 </url>
 <url>
-  <loc>http://node.olszus.usermd.net/partnerzy/link4</loc>
-  <lastmod>2023-11-11T17:49:54+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>http://node.olszus.usermd.net/partnerzy/wiener/</loc>
+	<lastmod>2023-11-20T22:02:13+01:00</lastmod>
+	<priority>0.6</priority>
 </url>
 <url>
-  <loc>http://node.olszus.usermd.net/partnerzy/mtu</loc>
-  <lastmod>2023-11-11T17:49:54+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>http://node.olszus.usermd.net/partnerzy/ergo/</loc>
+	<lastmod>2023-11-20T22:02:13+01:00</lastmod>
+	<priority>0.6</priority>
 </url>
 <url>
-  <loc>http://node.olszus.usermd.net/partnerzy/proama</loc>
-  <lastmod>2023-11-11T17:49:54+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>http://node.olszus.usermd.net/partnerzy/allianz</loc>
+	<lastmod>2023-11-20T22:02:13+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>http://node.olszus.usermd.net/partnerzy/pzu</loc>
-  <lastmod>2023-11-11T17:49:54+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>http://node.olszus.usermd.net/partnerzy/ergo-hestia</loc>
+	<lastmod>2023-11-20T22:02:13+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>http://node.olszus.usermd.net/partnerzy/uniqa</loc>
-  <lastmod>2023-11-11T17:49:55+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>http://node.olszus.usermd.net/partnerzy/generali</loc>
+	<lastmod>2023-11-20T22:02:13+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>http://node.olszus.usermd.net/partnerzy/warta</loc>
-  <lastmod>2023-11-11T17:49:55+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>http://node.olszus.usermd.net/partnerzy/hdi</loc>
+	<lastmod>2023-11-20T22:02:13+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>http://node.olszus.usermd.net/partnerzy/wiener</loc>
-  <lastmod>2023-11-11T17:49:55+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>http://node.olszus.usermd.net/partnerzy/interrisk</loc>
+	<lastmod>2023-11-20T22:02:13+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>http://node.olszus.usermd.net/partnerzy/ergo-hestia/</loc>
-  <lastmod>2023-11-11T17:49:54+00:00</lastmod>
-  <priority>0.64</priority>
+	<loc>http://node.olszus.usermd.net/partnerzy/link4</loc>
+	<lastmod>2023-11-20T22:02:13+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
-
-
+<url>
+	<loc>http://node.olszus.usermd.net/partnerzy/mtu</loc>
+	<lastmod>2023-11-20T22:02:13+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>http://node.olszus.usermd.net/partnerzy/proama</loc>
+	<lastmod>2023-11-20T22:02:13+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>http://node.olszus.usermd.net/partnerzy/pzu</loc>
+	<lastmod>2023-11-20T22:02:13+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>http://node.olszus.usermd.net/partnerzy/uniqa</loc>
+	<lastmod>2023-11-20T22:02:13+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>http://node.olszus.usermd.net/partnerzy/warta</loc>
+	<lastmod>2023-11-20T22:02:13+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>http://node.olszus.usermd.net/partnerzy/wiener</loc>
+	<lastmod>2023-11-20T22:02:13+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>http://node.olszus.usermd.net/partnerzy/ergo-hestia/</loc>
+	<lastmod>2023-11-20T22:02:16+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
 </urlset>
