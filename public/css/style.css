@@ -227,7 +227,7 @@ nav ul li ul li:hover {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  max-width: 75vw;
+  /* max-width: 75vw; */
 }
 
 .offer-container {
@@ -257,7 +257,6 @@ nav ul li ul li:hover {
   border-radius: 36px;
   margin-right: auto;
   padding: 2rem;
-  width: 70%;
 }
 .splide__pagination__page {
   background: #005896 !important;
@@ -879,6 +878,7 @@ h1 {
   justify-content: space-between;
   text-align: left;
   width: 50%;
+  background-color: #fff;
 }
 .car-left-site p {
   width: 70%;
@@ -902,7 +902,7 @@ h1 {
 .car-right-site img {
   width: 100%;
   height: auto;
-  border-radius: 25%;
+  border-radius: 5%;
 }
 .tools-nav {
   text-decoration: none;
@@ -1068,6 +1068,25 @@ h1 {
 .active.fade-bottom {
   animation: fade-bottom 0.75s ease-in;
 }
+#insurance {
+  margin-top: 2rem;
+}
+#insurance > div> div> div> div >div > h3 {
+  text-align: center;
+  margin-bottom: 3rem;
+  font-size: 2rem;
+}
+#insurance > div> div> div> div >div > h4 {
+  font-weight: 600;
+  line-height: 2rem;
+  font-size: 1.3rem;
+  border-bottom: 3px solid #69707531;
+  padding: .2rem;
+  margin-bottom: 1rem;
+}
+#insurance > div> div> div> div >div > p {
+  text-align: left;
+}
 
 @keyframes fade-bottom {
   0% {
@@ -1135,12 +1154,6 @@ h1 {
   }
   .container {
     max-width: 960px;
-  }
-  #offer {
-    max-width: 90vw;
-  }
-  .offer-container {
-    max-width: 100%;
   }
 }
 
@@ -1406,19 +1419,21 @@ h1 {
     justify-content: center;
   }
   .right-row {
-    width: 25%;
-    align-self: center;
+    display: none;
   }
   .left-row {
     width: 100%;
     padding-left: 2rem;
+  }
+  .left-row >div >i {
+    margin-top: 2rem;
   }
   .offer-box .right-row img {
     width: 100%;
   }
 
   .partners-container {
-    max-width: 90%;
+    max-width: 100%;
   }
   .partners-container h2 {
     font-size: 1.3rem;

@@ -152,6 +152,29 @@ partnersRoutes.forEach((partner) => {
 app.get("/partnerzy/", function (req, res) {
   res.render("../pages/partners/partners", {title: "Partnerzy"});
 });
+
+// Insurance descriptions 
+app.get("/ubezpieczenia", function (req, res) {
+  res.redirect("/ubezpieczenie-oc-ac");
+});
+app.get("/ubezpieczenie-oc-ac", function (req, res) {
+  res.render("../pages/insurance/car.ejs", {title: "Ubezpieczenia"});
+});
+app.get("/ubezpieczenie-podrozne", function (req, res) {
+  res.render("../pages/insurance/travel.ejs", {title: "Ubezpieczenia"});
+});
+app.get("/ubezpieczenie-na-zycie", function (req, res) {
+  res.render("../pages/insurance/life.ejs", {title: "Ubezpieczenia"});
+});
+app.get("/ubezpieczenie-szkolne", function (req, res) {
+  res.render("../pages/insurance/school.ejs", {title: "Ubezpieczenia"});
+});
+app.get("/ubezpieczenie-mieszkan", function (req, res) {
+  res.render("../pages/insurance/home.ejs", {title: "Ubezpieczenia"});
+});
+app.get("/ubezpieczenie-firmowe", function (req, res) {
+  res.render("../pages/insurance/company.ejs", {title: "Ubezpieczenia"});
+});
 // 404 Route
 app.get("*", function (req, res) {
   res.render("../pages/404" , {title: "404"});

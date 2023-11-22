@@ -54,7 +54,11 @@
           </ul>
         </li>
         <li><a href="/kontakt"<% if (title === 'Kontakt') { %>class="nav-active" <% } %>>Kontakt</a></li>
-        <li><a href="/faq"<% if (title === 'Faq') { %>class="nav-active" <% } %>>FAQ</a></li>
+        <li><a href="/faq"<% if (title === 'Faq') { %>class="nav-active" <% } %>>FAQ</a>
+          <ul>
+            <a href="/faq"><li class="on-hover-menu">FAQ</li></a>
+            <a href="/faq/slownik-pojec"><li class="on-hover-menu">Słownik pojęć</li></a>
+          </ul></li>
 
       </ul>
     </nav>
